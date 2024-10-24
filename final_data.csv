@@ -1,0 +1,309 @@
+,Age,Studentship,Study level,Field of study,Allergy,Cats previously,Cityness,Nationality,English level,recog_pos,recog_neg,recog_neut,recog_unrel,freerecall_pos,freerecall_neg,freerecall_neut,freerecall_unrel,condition,previous_condition
+0,23.0,Yes,Bachelors degree,psychology,No,Yes,82.0,gb,C2,1.0,0.9166666666666666,0.6666666666666666,0.1333333333333333,2.0,1.0,1.0,0.0,Dirty,Nothing
+1,22.0,Yes,Bachelors degree,psychology ,No,Yes,60.0,ch,B2,0.9166666666666666,0.5833333333333334,0.6666666666666666,0.1333333333333333,2.5,1.0,0.5,0.0,Dirty,Nothing
+2,21.0,Yes,Bachelors degree,psychology,Maybe,Yes,60.0,ch ,B2,0.9166666666666666,0.5833333333333334,0.3333333333333333,0.0666666666666666,1.5,2.0,0.0,0.0,Cute,Nothing
+3,25.0,Yes,Pre-University,philosophy,Maybe,No,86.0,ch,C1,0.8333333333333334,0.8333333333333334,0.6666666666666666,0.0666666666666666,0.5,0.5,0.5,0.0,Cute,Nothing
+4,22.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.5,0.5,1.0,0.0666666666666666,2.0,1.0,0.5,0.0,Neut,Nothing
+5,22.0,Yes,Bachelors degree,psychology,No,No,20.0,ch,B2,0.5,0.6666666666666666,0.8333333333333334,0.0,1.0,1.0,0.5,0.5,Neut,Nothing
+6,19.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,C1,0.75,0.6666666666666666,0.8333333333333334,0.2,2.0,1.5,0.5,0.5,Neut,Nothing
+7,21.0,Yes,Bachelors degree,psychology,Maybe,Yes,76.0,ch,B2,0.6666666666666666,0.6666666666666666,0.5,0.2,2.0,1.0,0.0,0.0,Dirty,Nothing
+8,19.0,Yes,Bachelors degree,psychology,No,Yes,80.0,ba,B1,0.8333333333333334,0.4166666666666667,1.0,0.0666666666666666,2.0,0.0,0.0,0.0,Scary,Nothing
+9,20.0,Yes,Bachelors degree,psychology,Yes,No,40.0,ch,B2,0.5,0.3333333333333333,0.3333333333333333,0.4666666666666667,2.0,0.5,0.5,0.0,Dirty,Nothing
+10,19.0,Yes,Bachelors degree,psychology,No,Yes,39.0,ch,B1,0.5,0.6666666666666666,0.6666666666666666,0.2666666666666666,1.0,1.0,0.5,0.5,Scary,Nothing
+11,19.0,Yes,Bachelors degree,psychology,No,Yes,90.0,ch,B2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Cute,Nothing
+12,19.0,Yes,Bachelors degree,psychology,Yes,No,71.0,ch,B2,0.9166666666666666,0.75,0.6666666666666666,0.0,1.5,0.0,1.5,0.0,invalid,Nothing
+13,20.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ch,B1,0.9166666666666666,0.8333333333333334,0.8333333333333334,0.0666666666666666,0.5,1.0,0.5,0.0,Scary,Nothing
+14,18.0,Yes,Bachelors degree,psychology,Yes,Yes,50.0,gb,No knowledge,0.6666666666666666,0.5833333333333334,0.5,0.2666666666666666,1.0,0.5,1.5,0.0,Dirty,Nothing
+15,27.0,Yes,Bachelors degree,psychology,Yes,No,51.0,it,B1,0.75,0.6666666666666666,0.6666666666666666,0.3333333333333333,1.5,1.0,0.0,0.5,Scary,Nothing
+16,19.0,Yes,Bachelors degree,psychology,Maybe,No,48.0,ch,B2,0.9166666666666666,0.1666666666666666,0.6666666666666666,0.0666666666666666,1.5,1.0,0.5,0.0,Scary,Nothing
+17,18.0,Yes,Bachelors degree,psychology,No,No,45.0,er,B2,0.5,0.6666666666666666,0.5,0.1333333333333333,1.0,0.5,1.5,0.0,Scary,Nothing
+18,25.0,Yes,Bachelors degree,psychology,No,Yes,10.0,es,A2,0.5833333333333334,0.5833333333333334,1.0,0.0,1.5,1.0,0.5,0.0,Cute,Nothing
+19,19.0,Yes,Pre-University,psychology,No,Yes,83.0,ch,B2,0.9166666666666666,0.8333333333333334,0.8333333333333334,0.2,2.5,1.5,1.0,0.0,Dirty,Nothing
+20,20.0,Yes,Bachelors degree,psychology,Yes,No,30.0,ch,B2,0.9166666666666666,0.5,1.0,0.0666666666666666,4.0,0.0,0.5,0.0,Dirty,Nothing
+21,20.0,Yes,Bachelors degree,psychology,Yes,Yes,40.0,ch,C1,0.5833333333333334,0.4166666666666667,0.5,0.2,1.5,1.5,0.0,0.0,Neut,Nothing
+22,22.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,B2,0.5,0.25,0.6666666666666666,0.0,1.0,1.5,0.5,0.0,Scary,Nothing
+23,18.0,Yes,Bachelors degree,psychology,Maybe,Yes,50.0,ru,B2,0.8333333333333334,0.6666666666666666,0.8333333333333334,0.1333333333333333,3.0,2.0,0.5,0.0,Scary,Nothing
+24,24.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,A2,0.8333333333333334,0.5,0.5,0.0666666666666666,2.0,1.0,0.0,0.0,Neut,Nothing
+25,22.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.8333333333333334,1.0,0.8333333333333334,0.0666666666666666,3.0,1.5,0.5,0.5,Scary,Nothing
+26,21.0,Yes,Bachelors degree,arts,No,No,85.0,es,C1,0.75,0.8333333333333334,0.5,0.0666666666666666,1.5,1.0,0.5,0.0,Scary,Nothing
+27,19.0,Yes,Pre-University,psychology,No,No,100.0,pt,B2,0.6666666666666666,0.6666666666666666,0.5,0.2,2.0,1.5,0.5,0.0,Dirty,Nothing
+28,20.0,Yes,Bachelors degree,psychology,Maybe,Yes,30.0,ch,C1,0.8333333333333334,0.75,1.0,0.2666666666666666,0.0,1.0,2.0,0.0,Dirty,Nothing
+29,18.0,Yes,Pre-University,psychology,No,Yes,20.0,ch,B1,0.0833333333333333,0.5833333333333334,0.3333333333333333,1.0,3.0,1.0,0.5,0.0,Cute,Nothing
+30,22.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ru,C1,0.6666666666666666,0.6666666666666666,1.0,0.0666666666666666,1.0,1.0,1.0,0.0,Neut,Nothing
+31,20.0,Yes,Bachelors degree,sports,No,Yes,85.0,ch,B2,0.6666666666666666,1.0,0.6666666666666666,0.0666666666666666,1.0,1.5,0.0,0.0,Neut,Nothing
+32,21.0,Yes,Bachelors degree,psychology,No,Yes,5.0,ch,B2,0.75,0.5,0.5,0.2666666666666666,2.0,0.5,0.0,0.0,Dirty,Nothing
+33,22.0,Yes,Bachelors degree,psychology,Yes,Yes,17.0,ch,B2,0.5833333333333334,0.75,0.8333333333333334,0.6,0.5,2.0,0.5,0.0,Cute,Nothing
+34,23.0,Yes,Bachelors degree,psychology,Yes,Yes,80.0,ch,B2,0.6666666666666666,0.5833333333333334,0.5,0.0666666666666666,1.5,2.0,0.5,0.0,Dirty,Nothing
+35,20.0,Yes,Bachelors degree,philosophy,No,Yes,81.0,ch,C1,0.4166666666666667,0.4166666666666667,0.5,0.9333333333333332,0.5,1.5,1.0,0.0,Dirty,Nothing
+36,20.0,Yes,Pre-University,psychology,No,Yes,81.0,ch,C1,0.75,0.8333333333333334,0.6666666666666666,0.4666666666666667,2.0,1.0,0.0,0.0,Cute,Nothing
+37,20.0,Yes,Bachelors degree,psychology,No,No,80.0,ch,B2,1.0,0.4166666666666667,1.0,0.0666666666666666,2.0,0.5,0.5,0.5,Dirty,Nothing
+38,25.0,Yes,Bachelors degree,psychology,No,Yes,50.0,ru,B2,0.6666666666666666,0.6666666666666666,0.3333333333333333,0.0,2.5,2.5,0.5,0.5,Neut,Nothing
+39,20.0,Yes,Bachelors degree,psychology,Yes,No,84.0,ch,B2,0.5,0.3333333333333333,0.1666666666666666,0.0,2.0,1.0,0.5,0.5,Cute,Nothing
+40,25.0,Yes,Bachelors degree,psychology,No,Yes,10.0,ch,C1,0.6666666666666666,0.75,0.8333333333333334,1.0,1.5,1.0,1.0,0.0,Neut,Nothing
+41,23.0,Yes,Bachelors degree,psychology,No,Yes,25.0,ch,B2,0.8333333333333334,0.8333333333333334,0.5,0.0,2.5,0.0,0.5,0.0,Cute,Nothing
+42,20.0,Yes,Pre-University,psychology,No,Yes,40.0,it,B2,0.8333333333333334,0.5833333333333334,0.8333333333333334,0.0,2.0,0.5,1.0,0.0,Scary,Nothing
+43,20.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ru,C1,0.6666666666666666,0.5833333333333334,0.6666666666666666,0.0,1.0,1.0,1.0,0.0,Scary,Nothing
+44,22.0,Yes,Bachelors degree,psychology,No,Yes,35.0,ch,B2,0.5833333333333334,0.4166666666666667,0.6666666666666666,0.0666666666666666,2.0,0.5,0.5,0.0,Dirty,Nothing
+45,21.0,Yes,Bachelors degree,psychology,No,No,50.0,pt,C1,0.75,0.6666666666666666,0.5,0.2666666666666666,0.0,2.0,1.0,0.0,Cute,Nothing
+46,20.0,Yes,Bachelors degree,psychology ,No,Yes,81.0,ch,B2,0.6666666666666666,0.8333333333333334,0.8333333333333334,0.0,2.0,1.0,0.0,0.0,Cute,Nothing
+47,22.0,Yes,Bachelors degree,psychology,No,No,85.0,ch,B2,0.8333333333333334,0.6666666666666666,0.5,0.1333333333333333,3.0,0.0,0.5,0.0,Scary,Nothing
+48,20.0,Yes,Bachelors degree,psychology,No,No,61.0,ch,A2,0.5833333333333334,0.75,1.0,0.0,2.0,0.5,0.5,0.0,Cute,Nothing
+49,19.0,Yes,Bachelors degree,arts,No,No,71.0,ch,C2,0.75,0.1666666666666666,1.0,0.3333333333333333,1.5,1.0,0.5,0.0,Cute,Nothing
+50,22.0,Yes,Bachelors degree,psychology,No,No,96.0,pt,C1,0.6666666666666666,0.4166666666666667,0.1666666666666666,0.4,1.0,1.0,0.5,0.5,Cute,Nothing
+51,20.0,Yes,Bachelors degree,psychology,Yes,No,81.0,lk,B1,0.6666666666666666,0.9166666666666666,0.0,0.0,2.5,0.5,0.0,1.0,Dirty,Nothing
+52,20.0,Yes,Pre-University,psychology,No,Yes,70.0,ch,C1,0.5,0.4166666666666667,0.5,0.0666666666666666,1.0,1.0,0.5,0.5,Scary,Nothing
+53,19.0,Yes,Bachelors degree,psychology,No,Yes,29.0,ch,B2,0.4166666666666667,0.5,1.0,0.6666666666666666,2.5,0.0,0.5,0.0,Scary,Nothing
+54,19.0,Yes,Bachelors degree,psychology,Yes,No,50.0,ch,B2,0.4166666666666667,0.5,0.6666666666666666,0.0666666666666666,0.5,2.0,0.5,0.0,Dirty,Nothing
+55,20.0,Yes,Bachelors degree,psychology,No,Yes,100.0,ch,B1,0.75,0.6666666666666666,0.8333333333333334,0.0,1.0,1.5,0.5,0.0,Cute,Nothing
+56,22.0,Yes,Bachelors degree,arts,No,Yes,75.0,pt,C1,0.75,0.5,0.6666666666666666,0.2,0.5,2.0,0.5,0.0,Dirty,Nothing
+57,21.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.6666666666666666,0.5833333333333334,0.6666666666666666,0.0,3.0,1.0,0.0,0.0,Scary,Nothing
+58,20.0,Yes,Pre-University,psychology,No,Yes,70.0,ch,C1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Scary,Nothing
+59,19.0,Yes,Bachelors degree,psychology,No,Yes,45.0,ch,B2,0.75,0.5,0.5,0.0,1.0,1.5,0.5,0.0,invalid,Nothing
+60,19.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.5,0.5833333333333334,0.6666666666666666,0.0,1.0,1.5,0.5,0.0,Dirty,Nothing
+61,19.0,Yes,Bachelors degree,psychology,No,Yes,35.0,ch,B2,1.0,0.5,0.8333333333333334,0.2,2.0,1.0,1.0,0.0,Scary,Nothing
+62,19.0,Yes,Bachelors degree,psychology,No,No,80.0,es,B2,0.8333333333333334,0.4166666666666667,0.6666666666666666,0.8,1.5,1.0,0.5,0.0,Neut,Nothing
+63,26.0,Yes,Bachelors degree,psychology,No,Yes,69.0,ch,C1,1.0,0.8333333333333334,1.0,0.0666666666666666,1.0,1.0,1.0,0.0,Dirty,Nothing
+64,20.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,C2,1.0,0.5833333333333334,0.8333333333333334,0.0,0.5,2.0,0.5,0.0,Dirty,Nothing
+65,20.0,Yes,Pre-University,psychology,No,Yes,76.0,ch,B2,0.75,0.5833333333333334,0.8333333333333334,0.0,0.5,2.0,0.5,0.0,Cute,Nothing
+66,23.0,Yes,Pre-University,psychology,No,Yes,30.0,ch,C1,0.6666666666666666,0.5833333333333334,0.8333333333333334,0.0666666666666666,2.0,2.0,1.5,0.0,Scary,Nothing
+67,23.0,Yes,Pre-University,psychology,No,Yes,70.0,ch,B1,0.9166666666666666,0.9166666666666666,1.0,0.2666666666666666,2.0,1.0,0.0,0.0,Scary,Nothing
+68,19.0,Yes,Bachelors degree,arts,No,No,65.0,ch,C1,0.75,0.75,0.8333333333333334,0.0666666666666666,1.0,1.0,1.0,0.0,Dirty,Nothing
+69,19.0,Yes,Bachelors degree,psychology,No,Yes,64.0,ch,C1,0.75,0.6666666666666666,0.5,0.0,1.5,0.5,1.0,0.0,Cute,Nothing
+70,20.0,Yes,Bachelors degree,psychology,No,No,9.0,ch,B2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Cute,Nothing
+71,22.0,Yes,Bachelors degree,psychology,No,Yes,34.0,ch,B1,0.8333333333333334,0.6666666666666666,0.5,0.1333333333333333,2.0,1.5,0.0,0.0,invalid,Nothing
+72,23.0,Yes,Bachelors degree,psychology,No,No,45.0,ch,B2,0.5833333333333334,0.75,0.6666666666666666,0.0666666666666666,0.0,1.5,1.5,0.0,Dirty,Nothing
+73,21.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,B1,0.75,0.5,0.8333333333333334,0.1333333333333333,2.0,0.0,1.0,0.0,Dirty,Nothing
+74,19.0,Yes,Bachelors degree,arts,No,No,50.0,it,B2,0.8333333333333334,0.6666666666666666,0.8333333333333334,0.0,1.5,1.0,0.5,0.0,Neut,Nothing
+75,27.0,Yes,Bachelors degree,psychology,No,Yes,0.0,ch,C1,0.5,0.8333333333333334,0.6666666666666666,0.2666666666666666,0.5,0.5,0.0,0.5,Dirty,Nothing
+76,24.0,Yes,Bachelors degree,psychology,No,No,11.0,pt,B2,0.4166666666666667,0.5,0.6666666666666666,0.5333333333333333,2.0,0.5,0.5,0.0,Neut,Nothing
+77,22.0,Yes,Bachelors degree,psychology,No,Yes,54.0,ch,B1,0.9166666666666666,0.9166666666666666,1.0,0.0666666666666666,1.0,1.0,1.0,0.0,Neut,Nothing
+78,21.0,Yes,Pre-University,psychology,Yes,No,75.0,ch,B2,0.8333333333333334,0.5,0.6666666666666666,0.1333333333333333,0.5,1.5,0.5,0.5,Cute,Nothing
+79,20.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,B2,0.6666666666666666,0.5,0.6666666666666666,0.4,1.0,1.0,0.5,0.5,Cute,Nothing
+80,19.0,Yes,Bachelors degree,psychology,No,Yes,60.0,ch,B1,0.1666666666666666,0.6666666666666666,0.1666666666666666,0.5333333333333333,1.0,1.0,1.0,0.0,Scary,Nothing
+81,21.0,Yes,Bachelors degree,psychology,Maybe,Yes,50.0,ch,B2,0.75,0.3333333333333333,0.3333333333333333,0.2,1.5,0.0,0.0,0.0,Scary,Nothing
+82,21.0,Yes,Bachelors degree,psychology,No,Yes,20.0,ch,A2,0.75,0.75,0.6666666666666666,0.1333333333333333,1.0,2.0,0.0,0.0,Dirty,Nothing
+83,24.0,Yes,Bachelors degree,psychology,No,No,40.0,pl,B2,0.75,0.75,0.8333333333333334,0.0,3.0,1.5,0.5,0.0,Dirty,Nothing
+84,28.0,Yes,Masters degree,psychology,No,No,65.0,ch,B2,1.0,0.8333333333333334,0.3333333333333333,0.0,1.5,1.0,0.5,0.0,Dirty,Nothing
+85,21.0,Yes,Bachelors degree,psychology,No,No,50.0,ch,C1,0.9166666666666666,0.5833333333333334,0.6666666666666666,0.0666666666666666,2.0,1.0,0.0,0.0,Dirty,Nothing
+86,20.0,Yes,Bachelors degree,psychology,No,Yes,74.0,ca,C2,0.8333333333333334,0.9166666666666666,0.6666666666666666,0.0666666666666666,2.5,0.0,0.0,0.0,Dirty,Nothing
+87,19.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ch,C1,0.8333333333333334,0.5833333333333334,0.8333333333333334,0.3333333333333333,1.5,1.0,0.5,0.0,Dirty,Nothing
+88,22.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,B1,0.8333333333333334,0.6666666666666666,1.0,0.0666666666666666,1.0,1.5,0.5,0.0,Cute,Nothing
+89,24.0,Yes,Pre-University,psychology,No,Yes,71.0,es,B1,0.5,0.5,0.8333333333333334,0.1333333333333333,1.5,1.0,0.5,0.0,Neut,Nothing
+90,21.0,Yes,Pre-University,psychology,No,Yes,73.0,ch,B2,0.75,0.5833333333333334,0.6666666666666666,0.0666666666666666,2.0,0.5,0.5,0.0,Cute,Nothing
+91,20.0,Yes,Bachelors degree,psychology,No,Yes,18.0,ch,C1,0.75,0.6666666666666666,0.8333333333333334,0.0666666666666666,2.0,0.0,0.0,0.0,Cute,Nothing
+92,25.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ch,B2,0.8333333333333334,0.4166666666666667,0.6666666666666666,0.0666666666666666,2.0,1.0,0.5,0.0,Dirty,Nothing
+93,21.0,Yes,Pre-University,psychology,Maybe,No,14.0,pt,B2,0.6666666666666666,0.8333333333333334,0.3333333333333333,0.0,1.0,2.0,0.0,0.0,Cute,Nothing
+94,22.0,Yes,Bachelors degree,psychology,No,Yes,60.0,ch,B2,0.8333333333333334,0.75,0.5,0.0666666666666666,1.5,1.0,0.5,0.0,Dirty,Nothing
+95,47.0,Yes,Bachelors degree,psychology,Yes,Yes,50.0,us,C2,1.0,0.75,1.0,0.0666666666666666,0.5,1.0,1.5,0.0,Cute,Nothing
+96,18.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,B2,0.75,0.5833333333333334,0.8333333333333334,0.2,0.0,1.0,2.0,0.0,Dirty,Nothing
+97,21.0,Yes,Bachelors degree,psychology,No,Yes,75.0,fr,B2,0.75,0.8333333333333334,0.5,0.0666666666666666,1.0,1.5,0.5,0.0,Dirty,Nothing
+98,21.0,Yes,Bachelors degree,psychology,No,Yes,60.0,ch,B2,0.75,0.5,0.3333333333333333,0.1333333333333333,0.0,1.0,0.5,0.0,Cute,Nothing
+99,18.0,Yes,Pre-University,psychology,No,Yes,73.0,de,B2,0.5833333333333334,0.5,0.8333333333333334,0.0,0.5,1.5,1.0,0.0,Scary,Nothing
+100,19.0,Yes,Pre-University,psychology,No,Yes,60.0,ch,B1,1.0,0.5833333333333334,0.5,0.0666666666666666,1.0,2.0,0.0,0.0,Neut,Nothing
+101,20.0,Yes,Bachelors degree,psychology,No,Yes,80.0,es,C1,0.8333333333333334,0.6666666666666666,1.0,0.0,0.5,2.0,0.5,0.0,Neut,Nothing
+102,20.0,Yes,Bachelors degree,psychology,Yes,No,61.0,it,B2,0.75,0.6666666666666666,0.5,0.0,0.5,3.0,0.5,0.0,Cute,Nothing
+103,19.0,Yes,Bachelors degree,psychology,No,No,80.0,ch,C1,1.0,0.9166666666666666,1.0,0.0,1.0,0.5,1.5,0.0,Cute,Nothing
+104,22.0,Yes,Bachelors degree,psychology,No,No,40.0,pt,C1,1.0,0.9166666666666666,1.0,0.3333333333333333,0.5,2.0,0.5,0.0,Scary,Nothing
+105,21.0,Yes,Bachelors degree,psychology,No,No,82.0,en,C2,0.8333333333333334,0.3333333333333333,0.6666666666666666,0.0,2.5,0.0,0.5,0.0,Neut,Nothing
+106,29.0,Yes,Bachelors degree,psychology,No,Yes,50.0,ch,B2,0.5833333333333334,0.4166666666666667,0.6666666666666666,0.8,0.0,0.0,1.5,1.5,Dirty,Nothing
+107,19.0,Yes,Pre-University,psychology,No,Yes,84.0,ch,C2,0.5833333333333334,0.6666666666666666,0.0,0.3333333333333333,1.5,1.0,0.0,0.0,Neut,Nothing
+108,18.0,Yes,Pre-University,psychology,No,No,33.0,ch,B2,0.8333333333333334,0.5833333333333334,0.1666666666666666,0.0666666666666666,1.5,1.0,0.5,0.0,Neut,Nothing
+109,20.0,Yes,Bachelors degree,psychology,No,Yes,62.0,ch,C1,0.75,0.8333333333333334,0.8333333333333334,0.1333333333333333,1.0,2.0,0.0,0.0,Scary,Nothing
+110,23.0,Yes,Bachelors degree,psychology,No,Yes,38.0,ch,B2,0.6666666666666666,0.75,0.6666666666666666,0.0666666666666666,2.0,1.0,0.0,0.0,Dirty,Nothing
+111,20.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,B2,0.5833333333333334,0.6666666666666666,0.6666666666666666,0.0666666666666666,1.0,1.0,1.0,0.0,Dirty,Nothing
+112,25.0,Yes,Bachelors degree,psychology,No,Yes,82.0,ch,C1,1.0,0.8333333333333334,0.8333333333333334,0.0,1.0,0.5,1.5,0.0,Neut,Nothing
+113,18.0,Yes,Bachelors degree,arts,No,No,75.0,ch,C1,0.6666666666666666,0.8333333333333334,0.8333333333333334,0.0666666666666666,1.0,1.5,0.5,0.0,Scary,Nothing
+114,20.0,Yes,Bachelors degree,psychology,No,No,90.0,mr,C1,0.8333333333333334,0.75,0.8333333333333334,0.1333333333333333,2.0,1.0,0.0,0.0,Cute,Nothing
+115,24.0,Yes,Bachelors degree,psychology,No,Yes,50.0,pt,C1,0.8333333333333334,0.75,0.1666666666666666,0.1333333333333333,1.5,1.0,0.5,0.0,Dirty,Nothing
+116,23.0,Yes,Bachelors degree,psychology,No,Yes,85.0,ch,B2,0.75,0.6666666666666666,0.3333333333333333,0.0,1.0,1.5,0.5,0.0,Scary,Nothing
+117,22.0,Yes,Bachelors degree,psychology,No,No,77.0,ch,B1,0.75,0.5833333333333334,0.3333333333333333,0.1333333333333333,1.5,1.0,0.5,0.0,Dirty,Nothing
+118,20.0,Yes,Bachelors degree,psychology,No,No,71.0,pt,B2,0.8333333333333334,0.75,0.5,0.2,2.5,0.0,0.5,0.0,Scary,Nothing
+119,22.0,Yes,Bachelors degree,psychology,Yes,No,89.0,pt,B2,0.9166666666666666,0.75,0.8333333333333334,0.1333333333333333,1.5,2.0,0.0,0.0,Cute,Nothing
+120,22.0,Yes,Bachelors degree,psychology,No,Yes,73.0,ch,C1,0.8333333333333334,0.6666666666666666,0.6666666666666666,0.5333333333333333,1.5,1.0,0.5,0.0,Cute,Nothing
+121,19.0,Yes,Bachelors degree,psychology,No,Yes,90.0,ch,C1,0.5833333333333334,0.4166666666666667,0.3333333333333333,0.0,1.0,1.0,0.5,0.5,Neut,Nothing
+122,21.0,Yes,Pre-University,psychology,No,Yes,40.0,ch,B2,0.75,0.75,0.8333333333333334,0.0,2.0,1.0,0.0,0.0,Neut,Nothing
+123,18.0,Yes,Bachelors degree,psychology,No,Yes,51.0,mx,C1,0.75,0.6666666666666666,0.1666666666666666,0.0,1.0,0.5,1.0,0.5,Cute,Nothing
+124,20.0,Yes,Bachelors degree,psychology,No,No,81.0,ch,C1,1.0,0.6666666666666666,1.0,0.0666666666666666,1.5,1.0,0.5,0.0,Dirty,Nothing
+125,20.0,Yes,Bachelors degree,psychology,No,No,70.0,fr,C2,0.5833333333333334,0.4166666666666667,0.5,0.0,1.5,1.0,0.0,0.5,Neut,Nothing
+126,20.0,Yes,Bachelors degree,psychology,Yes,No,93.0,ch,B2,0.75,0.75,0.8333333333333334,0.2,2.0,1.0,0.0,0.0,Scary,Nothing
+127,19.0,Yes,Bachelors degree,psychology,Yes,No,90.0,ch,B1,0.8333333333333334,0.9166666666666666,0.8333333333333334,0.9333333333333332,0.5,1.0,0.5,1.0,Scary,Nothing
+128,24.0,Yes,Bachelors degree,psychology,No,Yes,76.0,ch,B2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Cute,Nothing
+129,21.0,Yes,Bachelors degree,psychology,No,Yes,35.0,pl,C1,0.5833333333333334,0.8333333333333334,1.0,0.1333333333333333,2.5,0.5,0.0,0.0,invalid,Nothing
+130,22.0,Yes,Bachelors degree,sports,No,No,70.0,ch,B2,0.9166666666666666,1.0,0.8333333333333334,0.4666666666666667,1.5,1.0,0.5,0.0,Cute,Nothing
+131,23.0,Yes,Bachelors degree,psychology,Yes,No,37.0,pt,B1,0.75,0.3333333333333333,0.1666666666666666,0.0666666666666666,1.5,0.5,1.0,0.0,Dirty,Nothing
+132,20.0,Yes,Bachelors degree,psychology,No,No,82.0,lu,C2,1.0,0.8333333333333334,0.8333333333333334,0.0,1.5,1.0,0.5,0.0,Cute,Nothing
+133,22.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.6666666666666666,0.5833333333333334,0.6666666666666666,0.4666666666666667,2.0,1.0,0.0,0.0,Neut,Nothing
+134,21.0,Yes,Bachelors degree,psychology,No,Yes,44.0,ch,B1,0.6666666666666666,0.75,0.8333333333333334,0.1333333333333333,2.0,1.0,0.0,0.0,Neut,Nothing
+135,18.0,Yes,Bachelors degree,psychology,No,No,80.0,fr,C1,0.9166666666666666,0.75,0.8333333333333334,0.0,1.5,1.0,0.5,0.0,Dirty,Nothing
+136,19.0,Yes,Bachelors degree,psychology,No,Yes,18.0,ch,B2,0.8333333333333334,0.9166666666666666,0.5,0.0,1.0,1.0,1.0,0.0,Neut,Nothing
+137,20.0,Yes,Bachelors degree,arts,No,Yes,44.0,ch,B2,0.5,0.3333333333333333,0.3333333333333333,0.2,0.0,1.5,1.5,0.0,Neut,Nothing
+138,22.0,Yes,Bachelors degree,psychology,Yes,No,50.0,ch,B2,0.5833333333333334,0.9166666666666666,0.5,0.0666666666666666,0.0,2.0,0.5,0.5,Cute,Nothing
+139,20.0,Yes,Bachelors degree,arts,Yes,No,70.0,pt,C1,0.6666666666666666,0.8333333333333334,0.5,0.0,1.0,1.5,0.5,0.0,Neut,Nothing
+140,19.0,Yes,Pre-University,psychology,No,No,90.0,pt,B2,0.9166666666666666,0.6666666666666666,0.8333333333333334,0.1333333333333333,2.0,1.0,0.5,0.0,Neut,Nothing
+141,24.0,Yes,Bachelors degree,arts,No,No,50.0,ch,B2,0.5,0.9166666666666666,0.8333333333333334,0.0666666666666666,1.0,1.5,0.5,0.0,Scary,Nothing
+142,23.0,Yes,Bachelors degree,psychology,No,Yes,82.0,gb,C2,1.0,0.8333333333333334,0.6666666666666666,0.2,2.5,1.0,0.0,0.0,Neut,Dirty
+143,22.0,Yes,Bachelors degree,psychology ,No,Yes,60.0,ch,B2,0.5833333333333334,0.9166666666666666,0.8333333333333334,0.0666666666666666,1.0,2.0,0.0,0.0,Neut,Dirty
+144,21.0,Yes,Bachelors degree,psychology,Maybe,Yes,60.0,ch ,B2,0.75,0.0833333333333333,0.6666666666666666,0.1333333333333333,2.0,1.0,0.0,0.0,Scary,Cute
+145,25.0,Yes,Pre-University,philosophy,Maybe,No,86.0,ch,C1,0.4166666666666667,0.75,0.8333333333333334,0.0,2.0,1.0,0.0,0.0,Dirty,Cute
+146,22.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.8333333333333334,0.5833333333333334,1.0,0.1333333333333333,2.5,1.0,0.0,0.0,Scary,Neut
+147,22.0,Yes,Bachelors degree,psychology,No,No,20.0,ch,B2,0.75,0.3333333333333333,0.6666666666666666,0.0,1.0,1.0,1.0,0.0,Scary,Neut
+148,19.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,C1,0.75,0.4166666666666667,0.1666666666666666,0.0666666666666666,2.0,1.0,0.0,0.0,Cute,Neut
+149,21.0,Yes,Bachelors degree,psychology,Maybe,Yes,76.0,ch,B2,0.8333333333333334,0.6666666666666666,0.6666666666666666,0.0,2.0,1.0,0.0,0.0,Scary,Dirty
+150,19.0,Yes,Bachelors degree,psychology,No,Yes,80.0,ba,B1,0.3333333333333333,0.5,0.6666666666666666,0.0666666666666666,1.0,2.0,0.0,0.0,Dirty,Scary
+151,20.0,Yes,Bachelors degree,psychology,Yes,No,40.0,ch,B2,0.8333333333333334,0.4166666666666667,0.8333333333333334,0.0666666666666666,1.0,1.0,1.0,0.0,Cute,Dirty
+152,19.0,Yes,Bachelors degree,psychology,No,Yes,39.0,ch,B1,0.9166666666666666,0.5833333333333334,0.5,0.3333333333333333,2.0,1.0,0.0,0.0,Cute,Scary
+153,19.0,Yes,Bachelors degree,psychology,No,Yes,90.0,ch,B2,0.75,0.5833333333333334,0.5,0.1333333333333333,1.0,1.0,1.0,0.0,Neut,Cute
+154,19.0,Yes,Bachelors degree,psychology,Yes,No,71.0,ch,B2,0.6666666666666666,0.9166666666666666,0.8333333333333334,0.1333333333333333,2.0,1.0,0.0,0.0,Cute,invalid
+155,20.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ch,B1,1.0,0.4166666666666667,1.0,0.2666666666666666,2.5,1.0,0.0,0.0,Cute,Scary
+156,18.0,Yes,Bachelors degree,psychology,Yes,Yes,50.0,gb,No knowledge,0.6666666666666666,0.8333333333333334,0.6666666666666666,0.2,2.0,1.0,0.0,0.0,Scary,Dirty
+157,27.0,Yes,Bachelors degree,psychology,Yes,No,51.0,it,B1,0.75,0.5833333333333334,0.6666666666666666,0.2,2.0,1.0,0.0,0.0,Neut,Scary
+158,19.0,Yes,Bachelors degree,psychology,Maybe,No,48.0,ch,B2,0.6666666666666666,0.5833333333333334,0.5,0.0,0.0,2.5,0.0,0.0,Dirty,Scary
+159,18.0,Yes,Bachelors degree,psychology,No,No,45.0,er,B2,0.8333333333333334,0.5,0.8333333333333334,0.2,3.0,0.0,0.0,0.0,Neut,Scary
+160,25.0,Yes,Bachelors degree,psychology,No,Yes,10.0,es,A2,0.75,0.75,0.5,0.0666666666666666,1.0,1.5,0.0,0.5,Dirty,Cute
+161,19.0,Yes,Pre-University,psychology,No,Yes,83.0,ch,B2,0.9166666666666666,0.6666666666666666,0.5,0.2,3.0,2.0,1.0,0.0,Neut,Dirty
+162,20.0,Yes,Bachelors degree,psychology,Yes,No,30.0,ch,B2,0.75,0.75,1.0,0.1333333333333333,1.5,2.0,0.0,0.0,Neut,Dirty
+163,20.0,Yes,Bachelors degree,psychology,Yes,Yes,40.0,ch,C1,0.25,0.5,0.0,0.0666666666666666,0.0,2.0,0.0,0.5,Cute,Neut
+164,22.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,B2,0.9166666666666666,0.4166666666666667,0.5,0.0666666666666666,1.5,1.5,0.0,0.0,Dirty,Scary
+165,18.0,Yes,Bachelors degree,psychology,Maybe,Yes,50.0,ru,B2,0.5833333333333334,0.6666666666666666,0.5,0.1333333333333333,1.0,1.0,1.0,0.0,Cute,Scary
+166,24.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,A2,0.4166666666666667,0.25,0.3333333333333333,0.2,0.5,1.5,0.0,0.0,Scary,Neut
+167,22.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.9166666666666666,0.75,1.0,0.3333333333333333,2.5,1.0,0.0,0.0,Neut,Scary
+168,21.0,Yes,Bachelors degree,arts,No,No,85.0,es,C1,0.6666666666666666,0.6666666666666666,0.6666666666666666,0.1333333333333333,2.0,1.0,0.0,0.0,Dirty,Scary
+169,19.0,Yes,Pre-University,psychology,No,No,100.0,pt,B2,1.0,0.75,0.3333333333333333,0.1333333333333333,3.5,0.5,0.0,0.0,Neut,Dirty
+170,20.0,Yes,Bachelors degree,psychology,Maybe,Yes,30.0,ch,C1,0.9166666666666666,0.9166666666666666,0.8333333333333334,0.0666666666666666,1.0,2.0,0.0,0.0,Neut,Dirty
+171,18.0,Yes,Pre-University,psychology,No,Yes,20.0,ch,B1,0.6666666666666666,0.4166666666666667,1.0,0.9333333333333332,0.0,3.0,0.0,0.0,Scary,Cute
+172,22.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ru,C1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Cute,Neut
+173,20.0,Yes,Bachelors degree,sports,No,Yes,85.0,ch,B2,0.5833333333333334,0.75,0.5,0.0,1.0,3.0,0.0,0.0,invalid,Neut
+174,21.0,Yes,Bachelors degree,psychology,No,Yes,5.0,ch,B2,0.5833333333333334,0.6666666666666666,0.5,0.1333333333333333,3.0,0.0,0.0,0.0,Neut,Dirty
+175,22.0,Yes,Bachelors degree,psychology,Yes,Yes,17.0,ch,B2,0.8333333333333334,0.5833333333333334,0.8333333333333334,0.3333333333333333,0.0,0.0,2.0,1.0,Scary,Cute
+176,23.0,Yes,Bachelors degree,psychology,Yes,Yes,80.0,ch,B2,0.5,0.5833333333333334,0.6666666666666666,0.0666666666666666,2.0,1.0,0.0,0.0,Cute,Dirty
+177,20.0,Yes,Bachelors degree,philosophy,No,Yes,81.0,ch,C1,0.3333333333333333,0.4166666666666667,0.1666666666666666,0.7333333333333333,2.0,1.0,0.0,0.0,Scary,Dirty
+178,20.0,Yes,Pre-University,psychology,No,Yes,81.0,ch,C1,0.6666666666666666,0.75,1.0,0.6,0.0,1.0,2.0,0.0,Neut,Cute
+179,20.0,Yes,Bachelors degree,psychology,No,No,80.0,ch,B2,0.6666666666666666,0.9166666666666666,1.0,0.0,1.0,1.0,0.5,0.5,Cute,Dirty
+180,25.0,Yes,Bachelors degree,psychology,No,Yes,50.0,ru,B2,0.9166666666666666,0.5833333333333334,0.6666666666666666,0.0666666666666666,3.0,1.0,0.0,0.0,Scary,Neut
+181,20.0,Yes,Bachelors degree,psychology,Yes,No,84.0,ch,B2,0.25,0.5833333333333334,0.3333333333333333,0.0,1.0,2.0,0.0,0.0,Scary,Cute
+182,25.0,Yes,Bachelors degree,psychology,No,Yes,10.0,ch,C1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Dirty,Neut
+183,23.0,Yes,Bachelors degree,psychology,No,Yes,25.0,ch,B2,0.8333333333333334,0.75,0.8333333333333334,0.0666666666666666,2.0,1.0,0.0,0.0,invalid,Cute
+184,20.0,Yes,Pre-University,psychology,No,Yes,40.0,it,B2,0.9166666666666666,0.5833333333333334,0.5,0.1333333333333333,1.0,1.0,1.0,0.0,Neut,Scary
+185,20.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ru,C1,0.5833333333333334,0.8333333333333334,0.3333333333333333,0.0666666666666666,2.0,1.0,0.0,0.0,Dirty,Scary
+186,22.0,Yes,Bachelors degree,psychology,No,Yes,35.0,ch,B2,0.8333333333333334,0.4166666666666667,0.5,0.2666666666666666,1.5,1.0,0.0,0.0,Cute,Dirty
+187,21.0,Yes,Bachelors degree,psychology,No,No,50.0,pt,C1,0.6666666666666666,0.5,0.8333333333333334,0.2,3.0,0.0,0.0,0.0,Dirty,Cute
+188,20.0,Yes,Bachelors degree,psychology ,No,Yes,81.0,ch,B2,1.0,0.75,0.8333333333333334,0.0,1.0,2.0,0.0,0.0,Neut,Cute
+189,22.0,Yes,Bachelors degree,psychology,No,No,85.0,ch,B2,0.5833333333333334,0.6666666666666666,0.3333333333333333,0.0,3.0,1.0,0.0,0.0,Neut,Scary
+190,20.0,Yes,Bachelors degree,psychology,No,No,61.0,ch,A2,0.9166666666666666,0.5833333333333334,0.6666666666666666,0.0,1.0,2.0,0.0,0.0,Neut,Cute
+191,19.0,Yes,Bachelors degree,arts,No,No,71.0,ch,C2,0.5,0.75,0.8333333333333334,0.1333333333333333,0.0,1.0,1.0,0.5,Scary,Cute
+192,22.0,Yes,Bachelors degree,psychology,No,No,96.0,pt,C1,0.75,0.3333333333333333,0.3333333333333333,0.2666666666666666,2.0,1.0,0.0,0.0,Scary,Cute
+193,20.0,Yes,Bachelors degree,psychology,Yes,No,81.0,lk,B1,1.0,0.75,0.8333333333333334,0.1333333333333333,1.0,2.0,0.0,0.0,Neut,Dirty
+194,20.0,Yes,Pre-University,psychology,No,Yes,70.0,ch,C1,0.75,0.5833333333333334,0.5,0.0,2.0,1.0,0.0,0.0,Neut,Scary
+195,19.0,Yes,Bachelors degree,psychology,No,Yes,29.0,ch,B2,0.3333333333333333,0.5833333333333334,1.0,0.1333333333333333,1.0,1.5,0.0,0.5,Dirty,Scary
+196,19.0,Yes,Bachelors degree,psychology,Yes,No,50.0,ch,B2,0.6666666666666666,0.1666666666666666,0.3333333333333333,0.0666666666666666,3.0,0.0,0.0,0.0,Neut,Dirty
+197,20.0,Yes,Bachelors degree,psychology,No,Yes,100.0,ch,B1,0.75,0.6666666666666666,0.8333333333333334,0.0,1.0,2.0,0.0,0.0,Neut,Cute
+198,22.0,Yes,Bachelors degree,arts,No,Yes,75.0,pt,C1,0.5833333333333334,0.4166666666666667,0.5,0.1333333333333333,1.0,2.0,0.0,0.0,Cute,Dirty
+199,21.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.9166666666666666,0.5,0.5,0.0,3.0,0.0,1.0,0.0,Dirty,Scary
+200,20.0,Yes,Pre-University,psychology,No,Yes,70.0,ch,C1,0.5,0.6666666666666666,0.5,0.2,2.0,1.0,0.0,0.0,Cute,Scary
+201,19.0,Yes,Bachelors degree,psychology,No,Yes,45.0,ch,B2,0.5,0.75,0.6666666666666666,0.0,2.0,1.0,0.0,0.0,Neut,invalid
+202,19.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.8333333333333334,0.3333333333333333,0.6666666666666666,0.2,1.0,2.0,0.0,0.0,Cute,Dirty
+203,19.0,Yes,Bachelors degree,psychology,No,Yes,35.0,ch,B2,0.75,1.0,0.6666666666666666,0.0,1.0,2.0,0.0,0.0,Dirty,Scary
+204,19.0,Yes,Bachelors degree,psychology,No,No,80.0,es,B2,0.6666666666666666,0.5833333333333334,0.6666666666666666,0.4666666666666667,1.0,1.0,0.0,0.0,Scary,Neut
+205,26.0,Yes,Bachelors degree,psychology,No,Yes,69.0,ch,C1,0.75,0.75,0.8333333333333334,0.0,1.0,2.0,0.0,0.0,Neut,Dirty
+206,20.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,C2,0.5833333333333334,0.9166666666666666,0.8333333333333334,0.0,1.0,2.0,0.0,0.0,Neut,Dirty
+207,20.0,Yes,Pre-University,psychology,No,Yes,76.0,ch,B2,0.8333333333333334,0.9166666666666666,1.0,0.0666666666666666,1.0,1.0,1.0,0.0,Dirty,Cute
+208,23.0,Yes,Pre-University,psychology,No,Yes,30.0,ch,C1,0.4166666666666667,0.5833333333333334,0.6666666666666666,0.1333333333333333,1.0,1.5,0.0,0.0,Neut,Scary
+209,23.0,Yes,Pre-University,psychology,No,Yes,70.0,ch,B1,0.8333333333333334,0.75,1.0,0.2,2.0,0.0,1.0,0.0,Cute,Scary
+210,19.0,Yes,Bachelors degree,arts,No,No,65.0,ch,C1,0.8333333333333334,0.6666666666666666,0.6666666666666666,0.1333333333333333,2.0,1.0,0.0,0.0,Cute,Dirty
+211,19.0,Yes,Bachelors degree,psychology,No,Yes,64.0,ch,C1,0.9166666666666666,0.5833333333333334,1.0,0.0666666666666666,2.0,1.0,0.0,0.0,Scary,Cute
+212,20.0,Yes,Bachelors degree,psychology,No,No,9.0,ch,B2,0.9166666666666666,0.6666666666666666,0.5,0.1333333333333333,0.0,3.0,0.0,0.0,Neut,Cute
+213,22.0,Yes,Bachelors degree,psychology,No,Yes,34.0,ch,B1,0.75,0.6666666666666666,1.0,0.0666666666666666,1.0,2.0,0.0,0.0,Neut,invalid
+214,23.0,Yes,Bachelors degree,psychology,No,No,45.0,ch,B2,0.9166666666666666,0.75,0.8333333333333334,0.2666666666666666,1.0,2.0,0.0,0.0,Scary,Dirty
+215,21.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,B1,0.8333333333333334,0.5833333333333334,0.6666666666666666,0.1333333333333333,1.0,1.0,1.0,0.0,Neut,Dirty
+216,19.0,Yes,Bachelors degree,arts,No,No,50.0,it,B2,0.8333333333333334,0.8333333333333334,0.6666666666666666,0.0666666666666666,3.0,0.0,0.0,0.0,Scary,Neut
+217,27.0,Yes,Bachelors degree,psychology,No,Yes,0.0,ch,C1,0.5833333333333334,0.5,1.0,0.1333333333333333,1.0,2.0,0.0,0.0,Scary,Dirty
+218,24.0,Yes,Bachelors degree,psychology,No,No,11.0,pt,B2,0.8333333333333334,0.4166666666666667,0.1666666666666666,0.4,2.0,1.0,0.0,0.0,Scary,Neut
+219,22.0,Yes,Bachelors degree,psychology,No,Yes,54.0,ch,B1,0.5833333333333334,0.6666666666666666,0.6666666666666666,0.6,1.0,1.0,1.0,0.0,Dirty,Neut
+220,21.0,Yes,Pre-University,psychology,Yes,No,75.0,ch,B2,0.3333333333333333,0.8333333333333334,0.6666666666666666,0.4,2.0,1.0,0.0,0.0,Dirty,Cute
+221,20.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,B2,0.75,0.4166666666666667,0.6666666666666666,0.2666666666666666,2.0,1.0,0.0,0.0,Scary,Cute
+222,19.0,Yes,Bachelors degree,psychology,No,Yes,60.0,ch,B1,0.75,0.75,0.5,0.2,1.0,2.0,0.0,0.0,Neut,Scary
+223,21.0,Yes,Bachelors degree,psychology,Maybe,Yes,50.0,ch,B2,0.5833333333333334,0.5833333333333334,0.8333333333333334,0.3333333333333333,0.0,2.5,0.0,0.0,Cute,Scary
+224,21.0,Yes,Bachelors degree,psychology,No,Yes,20.0,ch,A2,0.8333333333333334,0.6666666666666666,0.8333333333333334,0.2,2.5,1.0,0.0,0.0,Cute,Dirty
+225,24.0,Yes,Bachelors degree,psychology,No,No,40.0,pl,B2,0.9166666666666666,0.8333333333333334,1.0,0.1333333333333333,2.5,1.0,0.0,0.0,Scary,Dirty
+226,28.0,Yes,Masters degree,psychology,No,No,65.0,ch,B2,0.75,0.8333333333333334,0.5,0.0,1.0,2.0,0.0,0.0,Neut,Dirty
+227,21.0,Yes,Bachelors degree,psychology,No,No,50.0,ch,C1,1.0,0.75,0.8333333333333334,0.0666666666666666,2.0,1.0,0.0,0.0,Neut,Dirty
+228,20.0,Yes,Bachelors degree,psychology,No,Yes,74.0,ca,C2,0.6666666666666666,0.5833333333333334,0.6666666666666666,0.5333333333333333,1.0,1.0,1.0,0.0,Cute,Dirty
+229,19.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ch,C1,0.3333333333333333,0.5833333333333334,1.0,0.0666666666666666,2.5,1.0,0.0,0.0,Scary,Dirty
+230,22.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,B1,1.0,0.75,0.6666666666666666,0.1333333333333333,2.0,1.0,0.0,0.0,Scary,Cute
+231,24.0,Yes,Pre-University,psychology,No,Yes,71.0,es,B1,0.75,0.5833333333333334,0.8333333333333334,0.0,2.0,1.0,0.0,0.0,Scary,Neut
+232,21.0,Yes,Pre-University,psychology,No,Yes,73.0,ch,B2,0.9166666666666666,0.6666666666666666,0.5,0.0666666666666666,2.0,1.0,0.0,0.0,Neut,Cute
+233,20.0,Yes,Bachelors degree,psychology,No,Yes,18.0,ch,C1,0.75,0.6666666666666666,0.5,0.0666666666666666,2.0,1.0,0.0,0.0,Scary,Cute
+234,25.0,Yes,Bachelors degree,psychology,No,Yes,70.0,ch,B2,0.6666666666666666,0.75,0.6666666666666666,0.0,2.0,1.0,0.0,0.0,Neut,Dirty
+235,21.0,Yes,Pre-University,psychology,Maybe,No,14.0,pt,B2,0.6666666666666666,0.9166666666666666,0.6666666666666666,0.2666666666666666,1.0,2.0,0.0,0.0,Scary,Cute
+236,22.0,Yes,Bachelors degree,psychology,No,Yes,60.0,ch,B2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Neut,Dirty
+237,47.0,Yes,Bachelors degree,psychology,Yes,Yes,50.0,us,C2,0.4166666666666667,0.5833333333333334,0.6666666666666666,0.1333333333333333,2.0,1.0,0.0,0.0,Dirty,Cute
+238,18.0,Yes,Bachelors degree,psychology,No,Yes,40.0,ch,B2,0.8333333333333334,0.9166666666666666,0.8333333333333334,0.0,2.0,1.0,0.0,0.0,Scary,Dirty
+239,21.0,Yes,Bachelors degree,psychology,No,Yes,75.0,fr,B2,0.6666666666666666,0.6666666666666666,0.5,0.0,1.0,2.0,0.0,0.0,Scary,Dirty
+240,21.0,Yes,Bachelors degree,psychology,No,Yes,60.0,ch,B2,0.4166666666666667,0.6666666666666666,1.0,0.0666666666666666,1.0,2.0,0.0,0.0,Neut,Cute
+241,18.0,Yes,Pre-University,psychology,No,Yes,73.0,de,B2,0.9166666666666666,0.8333333333333334,0.3333333333333333,0.1333333333333333,2.5,1.0,0.0,0.0,Dirty,Scary
+242,19.0,Yes,Pre-University,psychology,No,Yes,60.0,ch,B1,0.6666666666666666,0.6666666666666666,0.6666666666666666,0.2,1.0,1.0,1.0,0.0,Scary,Neut
+243,20.0,Yes,Bachelors degree,psychology,No,Yes,80.0,es,C1,0.75,0.75,0.5,0.0666666666666666,2.0,1.0,0.0,0.0,Scary,Neut
+244,20.0,Yes,Bachelors degree,psychology,Yes,No,61.0,it,B2,0.8333333333333334,0.75,0.6666666666666666,0.0666666666666666,2.0,2.0,0.0,0.0,Dirty,Cute
+245,19.0,Yes,Bachelors degree,psychology,No,No,80.0,ch,C1,0.75,0.9166666666666666,0.6666666666666666,0.2,1.0,2.0,0.0,0.0,Scary,Cute
+246,22.0,Yes,Bachelors degree,psychology,No,No,40.0,pt,C1,0.75,0.5,0.6666666666666666,0.2,1.0,2.0,0.0,0.0,Dirty,Scary
+247,21.0,Yes,Bachelors degree,psychology,No,No,82.0,en,C2,0.4166666666666667,0.75,0.5,0.0666666666666666,0.0,3.0,0.0,0.0,Dirty,Neut
+248,29.0,Yes,Bachelors degree,psychology,No,Yes,50.0,ch,B2,0.25,0.5,0.3333333333333333,0.2,1.0,2.5,0.0,0.5,Neut,Dirty
+249,19.0,Yes,Pre-University,psychology,No,Yes,84.0,ch,C2,0.9166666666666666,0.3333333333333333,0.3333333333333333,0.1333333333333333,2.0,1.0,0.0,0.0,Scary,Neut
+250,18.0,Yes,Pre-University,psychology,No,No,33.0,ch,B2,0.5833333333333334,0.8333333333333334,0.6666666666666666,0.0,1.0,2.0,0.0,0.0,Cute,Neut
+251,20.0,Yes,Bachelors degree,psychology,No,Yes,62.0,ch,C1,0.4166666666666667,0.4166666666666667,1.0,0.0666666666666666,1.0,2.0,0.0,0.0,Neut,Scary
+252,23.0,Yes,Bachelors degree,psychology,No,Yes,38.0,ch,B2,0.8333333333333334,0.8333333333333334,0.6666666666666666,0.0,2.0,1.0,0.0,0.0,Cute,Dirty
+253,20.0,Yes,Bachelors degree,psychology,No,No,70.0,ch,B2,0.5833333333333334,0.5,1.0,0.0,1.0,2.0,0.0,0.0,Cute,Dirty
+254,25.0,Yes,Bachelors degree,psychology,No,Yes,82.0,ch,C1,0.9166666666666666,0.75,0.8333333333333334,0.2,2.0,1.0,0.0,0.0,Cute,Neut
+255,18.0,Yes,Bachelors degree,arts,No,No,75.0,ch,C1,1.0,0.8333333333333334,1.0,0.0,2.0,0.0,1.0,0.0,Dirty,Scary
+256,20.0,Yes,Bachelors degree,psychology,No,No,90.0,mr,C1,0.9166666666666666,0.6666666666666666,1.0,0.0666666666666666,2.5,1.0,0.0,0.0,Scary,Cute
+257,24.0,Yes,Bachelors degree,psychology,No,Yes,50.0,pt,C1,0.3333333333333333,0.6666666666666666,0.8333333333333334,0.0,1.0,2.0,0.0,0.0,Scary,Dirty
+258,23.0,Yes,Bachelors degree,psychology,No,Yes,85.0,ch,B2,1.0,0.6666666666666666,0.5,0.0,2.5,1.0,0.0,0.0,Neut,Scary
+259,22.0,Yes,Bachelors degree,psychology,No,No,77.0,ch,B1,0.4166666666666667,0.6666666666666666,0.8333333333333334,0.0,1.0,2.0,0.0,0.0,Cute,Dirty
+260,20.0,Yes,Bachelors degree,psychology,No,No,71.0,pt,B2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Dirty,Scary
+261,22.0,Yes,Bachelors degree,psychology,Yes,No,89.0,pt,B2,0.6666666666666666,0.75,0.6666666666666666,0.0666666666666666,1.0,2.0,0.0,0.0,invalid,Cute
+262,22.0,Yes,Bachelors degree,psychology,No,Yes,73.0,ch,C1,0.5833333333333334,0.75,0.3333333333333333,0.2,2.0,0.0,1.0,0.0,Scary,Cute
+263,19.0,Yes,Bachelors degree,psychology,No,Yes,90.0,ch,C1,0.3333333333333333,0.25,0.5,0.0,1.0,1.0,0.0,1.0,Scary,Neut
+264,21.0,Yes,Pre-University,psychology,No,Yes,40.0,ch,B2,0.6666666666666666,0.4166666666666667,0.6666666666666666,0.0666666666666666,2.0,1.0,0.0,0.0,Dirty,Neut
+265,18.0,Yes,Bachelors degree,psychology,No,Yes,51.0,mx,C1,0.4166666666666667,0.6666666666666666,0.8333333333333334,0.1333333333333333,2.0,1.0,0.0,0.0,Scary,Cute
+266,20.0,Yes,Bachelors degree,psychology,No,No,81.0,ch,C1,0.75,0.6666666666666666,1.0,0.0666666666666666,1.0,2.0,0.0,0.0,Cute,Dirty
+267,20.0,Yes,Bachelors degree,psychology,No,No,70.0,fr,C2,0.8333333333333334,0.6666666666666666,0.5,0.1333333333333333,2.0,1.0,0.0,0.0,Cute,Neut
+268,20.0,Yes,Bachelors degree,psychology,Yes,No,93.0,ch,B2,0.4166666666666667,0.5833333333333334,0.5,0.2,1.0,2.0,0.0,0.0,Dirty,Scary
+269,19.0,Yes,Bachelors degree,psychology,Yes,No,90.0,ch,B1,0.75,0.4166666666666667,0.8333333333333334,0.4,2.0,0.0,1.0,0.0,Neut,Scary
+270,24.0,Yes,Bachelors degree,psychology,No,Yes,76.0,ch,B2,0.5833333333333334,0.75,0.8333333333333334,0.0666666666666666,3.0,3.0,0.0,0.0,Dirty,Cute
+271,21.0,Yes,Bachelors degree,psychology,No,Yes,35.0,pl,C1,1.0,0.75,0.8333333333333334,0.3333333333333333,1.0,2.0,0.0,0.0,Neut,invalid
+272,22.0,Yes,Bachelors degree,sports,No,No,70.0,ch,B2,0.75,0.75,0.6666666666666666,0.2,1.0,1.0,1.0,0.0,Neut,Cute
+273,23.0,Yes,Bachelors degree,psychology,Yes,No,37.0,pt,B1,0.5833333333333334,0.3333333333333333,0.5,0.0666666666666666,2.0,1.0,0.0,0.0,Neut,Dirty
+274,20.0,Yes,Bachelors degree,psychology,No,No,82.0,lu,C2,0.9166666666666666,0.8333333333333334,1.0,0.1333333333333333,0.0,1.0,2.0,0.0,Scary,Cute
+275,22.0,Yes,Bachelors degree,psychology,No,Yes,30.0,ch,B2,0.5,0.75,0.8333333333333334,0.2,1.0,1.0,0.0,1.0,Scary,Neut
+276,21.0,Yes,Bachelors degree,psychology,No,Yes,44.0,ch,B1,0.9166666666666666,0.9166666666666666,0.8333333333333334,0.0666666666666666,1.0,1.0,1.0,0.0,Dirty,Neut
+277,18.0,Yes,Bachelors degree,psychology,No,No,80.0,fr,C1,0.6666666666666666,0.75,0.8333333333333334,0.1333333333333333,1.0,2.0,0.0,0.0,Scary,Dirty
+278,19.0,Yes,Bachelors degree,psychology,No,Yes,18.0,ch,B2,0.9166666666666666,0.3333333333333333,0.8333333333333334,0.0666666666666666,2.0,1.0,0.0,0.0,Scary,Neut
+279,20.0,Yes,Bachelors degree,arts,No,Yes,44.0,ch,B2,0.5,0.5833333333333334,0.3333333333333333,0.2666666666666666,2.5,0.0,0.0,0.5,Dirty,Neut
+280,22.0,Yes,Bachelors degree,psychology,Yes,No,50.0,ch,B2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,Dirty,Cute
+281,20.0,Yes,Bachelors degree,arts,Yes,No,70.0,pt,C1,1.0,0.8333333333333334,1.0,0.0666666666666666,2.0,1.0,0.0,0.0,invalid,Neut
+282,19.0,Yes,Pre-University,psychology,No,No,90.0,pt,B2,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.0,0.0,2.5,0.0,0.0,Scary,Neut
+283,24.0,Yes,Bachelors degree,arts,No,No,50.0,ch,B2,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.0666666666666666,2.0,1.0,0.0,0.0,Cute,Scary
+284,23.0,Yes,Masters degree,physics,No,No,29.0,dk,C2,0.66666666666667,0.5,0.83333333333333,0.066666666666667,0.5,1.5,1.0,0.0,Dirty,Nothing
+285,22.0,Yes,Masters degree,physics,No,Yes,100.0,ru,C2,0.83333333333333,0.5,0.66666666666667,0.26666666666667,2.0,1.0,0.0,0.0,Cute,Nothing
+286,23.0,Yes,Masters degree,physics,No,Yes,100.0,ru,C2,0.91666666666667,0.75,1.0,0.26666666666667,2.0,1.0,0.0,0.0,Dirty,Nothing
+287,22.0,Yes,Bachelors degree,physics,Maybe,No,91.0,ru,A1,0.75,0.41666666666667,0.16666666666667,0.066666666666667,2.0,1.0,0.0,0.0,Neut,Nothing
+288,23.0,Yes,Masters degree,physics,No,Yes,50.0,fr,C1,0.75,0.75,0.5,0.13333333333333,1.0,2.0,0.0,0.0,Scary,Nothing
+289,24.0,Yes,Bachelors degree,physics,No,Yes,92.0,ve,C2,0.75,0.75,0.66666666666667,0.0,2.0,1.0,0.0,0.0,Scary,Nothing
+290,24.0,Yes,Masters degree,physics,No,Yes,62.0,ch,C1,0.75,0.5,1.0,0.066666666666667,2.0,1.0,0.0,0.0,Scary,Nothing
+291,23.0,Yes,Masters degree,physics,No,No,50.0,ch,C1,0.91666666666667,0.5,0.5,0.2,2.0,2.0,0.0,0.0,Dirty,Nothing
+292,22.0,Yes,Masters degree,physics,No,Yes,70.0,ru,B2,0.75,0.5,0.5,0.4,1.0,1.0,0.0,0.5,Scary,Nothing
+293,21.0,Yes,Masters degree,physics,No,No,66.0,ch,B2,0.66666666666667,0.75,0.33333333333333,0.0,2.0,2.0,0.0,0.0,Cute,Nothing
+294,23.0,Yes,Masters degree,physics,No,No,80.0,pt,C2,0.91666666666667,0.83333333333333,1.0,0.4,2.0,1.0,0.0,0.0,Neut,Nothing
+295,23.0,Yes,Masters degree,physics,No,No,60.0,in,C2,0.75,0.91666666666667,1.0,0.066666666666667,1.0,2.0,2.0,0.0,Neut,Nothing
+296,23.0,Yes,Masters degree,physics,No,No,29.0,dk,C2,0.5,0.16666666666667,0.16666666666667,0.13333333333333,1.0,2.0,0.0,0.0,Cute,Dirty
+297,22.0,Yes,Masters degree,physics,No,Yes,100.0,ru,C2,0.75,0.91666666666667,0.66666666666667,0.13333333333333,1.0,2.0,0.0,0.0,Neut,Cute
+298,23.0,Yes,Masters degree,physics,No,Yes,100.0,ru,C2,1.0,0.75,0.83333333333333,0.2,2.0,1.0,0.0,0.0,Scary,Dirty
+299,22.0,Yes,Bachelors degree,physics,Maybe,No,91.0,ru,A1,0.41666666666667,0.5,0.5,0.066666666666667,1.0,1.0,1.0,0.0,Scary,Neut
+300,23.0,Yes,Masters degree,physics,No,Yes,50.0,fr,C1,0.83333333333333,0.58333333333333,1.0,0.066666666666667,2.0,1.0,0.0,0.0,Dirty,Scary
+301,24.0,Yes,Bachelors degree,physics,No,Yes,92.0,ve,C2,0.58333333333333,0.66666666666667,0.66666666666667,0.0,2.0,1.0,0.0,0.0,Cute,Scary
+302,24.0,Yes,Masters degree,physics,No,Yes,62.0,ch,C1,0.75,1.0,0.5,0.13333333333333,1.0,2.0,0.0,0.0,Cute,Scary
+303,23.0,Yes,Masters degree,physics,No,No,50.0,ch,C1,0.91666666666667,1.0,1.0,0.4,1.0,2.0,0.0,0.0,Neut,Dirty
+304,22.0,Yes,Masters degree,physics,No,Yes,70.0,ru,B2,0.25,0.16666666666667,0.33333333333333,0.46666666666667,0.0,0.0,0.0,0.5,Dirty,Scary
+305,21.0,Yes,Masters degree,physics,No,No,66.0,ch,B2,0.66666666666667,0.25,0.5,0.0,2.0,1.0,0.0,0.0,Neut,Cute
+306,23.0,Yes,Masters degree,physics,No,No,80.0,pt,C2,0.66666666666667,0.66666666666667,0.83333333333333,0.26666666666667,1.0,2.0,0.0,0.0,Dirty,Neut
+307,23.0,Yes,Masters degree,physics,No,No,60.0,in,C2,0.83333333333333,0.58333333333333,0.83333333333333,0.13333333333333,1.0,1.0,1.0,0.0,Cute,Neut

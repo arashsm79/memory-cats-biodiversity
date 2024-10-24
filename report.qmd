@@ -1,0 +1,510 @@
+---
+title: "The Cuteness Fallacy: How Representations Affect People’s Knowledge Acquisition of Domestic
+Cats’ Impact on Biodiversity"
+author:
+  - name: Arash Sal Moslehian
+    corresponding: true
+    email: arash.salmoslehian@epfl.ch
+    affiliations:
+      - name: EPFL
+        department: Neuro-X
+        city: Lausanne
+        country: Switzerland
+abstract: |
+ Despite being beloved pets, cats pose significant threats to wildlife through predation and competition. Existing legislations struggle to mitigate these impacts, highlighting the necessity for effective communication strategies. This study surveys a mostly female Swiss sample (150 participants) of university students. We investigate how different visual representations of domestic cats-categorized as cute, scary, dirty, or neutral-influence participants' recall of information-either positive, negative, or neutral-about cats. We hypothesized that negative and dirty representations would enhance recall of negative information and cute representation would enhance the recall of positive information. Contrary to our expectations, our analyses revealed no significant effect of visual representations on the recall of positive, negative, or neutral information. The results suggest that strong emotional and social bonds with cats, as well as their prevalent positive representation in culture, may buffer against the influence of negative imagery. Exploratory analyses indicated that individual factors, such as having a cat allergy, significantly reduced the recall of positive information. These findings show the complexity of altering public perception about the ecological impact of familiar and positively perceived animals like cats. Our study reveals the limitations of using visual representations alone to influence knowledge acquisition.
+keywords: [biodiversity, cats, memory, emotions, representation]
+author-note:
+  disclosures:
+    conflict of interest: The author has no conflict of interest to declare.
+execute:
+  echo: false
+  output: false
+  eval: false
+bibliography: references.bib
+format:
+  apaquarto-pdf:
+    keep-tex: true
+  apaquarto-html: default
+  pdf:
+    keep-tex: true
+  apaquarto-docx: default
+  apaquarto-typst: default
+---
+
+```{r loading-libraries}
+#| eval: true
+setwd('/home/arashsm79/Playground/EPFL/memory-cats-biodiversity')
+library(ggplot2)
+library(olsrr)
+library(MASS)
+library(knitr)
+library(car)
+library(tidyverse)
+library(broom)
+library(xtable)
+library(dplyr)
+library(lmtest)
+library(kableExtra)
+```
+
+```{r preprocessing}
+#| eval: true
+df = read.csv('final_data.csv')
+df = subset(df, select = -X)
+
+df$previous_condition[df$previous_condition == 'invalid'] = 'Nothing'
+df = df[df$condition != "invalid",]
+
+df$previous_condition = factor(trimws(df$previous_condition))
+df$previous_condition <- relevel(df$previous_condition, ref = "Nothing")
+
+df$condition = factor(trimws(df$condition))
+df$condition <- relevel(df$condition, ref = "Cute")
+
+df$Studentship = factor(trimws(df$Studentship))
+df$Studentship <- relevel(df$Studentship, ref = "Yes")
+
+df$Study.level = factor(trimws(df$Study.level))
+df$Study.level <- relevel(df$Study.level, ref = "Bachelors degree")
+
+df$Field.of.study = factor(trimws(df$Field.of.study))
+df$Field.of.study <- relevel(df$Field.of.study, ref = "psychology")
+
+df$Allergy = factor(trimws(df$Allergy))
+df$Allergy <- relevel(df$Allergy, ref = "No")
+
+df$Cats.previously = factor(trimws(df$Cats.previously))
+df$Cats.previously <- relevel(df$Cats.previously, ref = "No")
+
+df$Nationality = factor(trimws(df$Nationality))
+df$Nationality <- relevel(df$Nationality, ref = "ch")
+
+df$English.level = factor(trimws(df$English.level))
+df$English.level <- relevel(df$English.level, ref = "B2")
+
+df$condition <- factor(df$condition, levels = c("Cute", "Neut", "Dirty", "Scary"))
+```
+
+```{r function-definitions}
+#| eval: true
+pvalue <- function(value){
+  if(is.na(value)) {
+    "-"
+  } else if(value < 0.001) {
+    paste0("<.001")
+  } else {
+    str_remove(value, pattern = "0(?=.\\d)")
+  }
+}
+```
+
+
+```{r variables}
+#| eval: true
+total_num_participants = round(dim(df)[1])
+nationality_ch_ratio = round(((sort(table(df$Nationality), decreasing=TRUE)['ch']) / total_num_participants) * 100, 2)
+gender_female_ratio = 78.72
+field_psych_ratio = round(((sort(table(df$Field.of.study), decreasing=TRUE)['psychology']) / total_num_participants) * 100, 2)
+field_phys_ratio = round(((sort(table(df$Field.of.study), decreasing=TRUE)['physics']) / total_num_participants) * 100, 2)
+field_phys_ratio = round(((sort(table(df$Field.of.study), decreasing=TRUE)['physics']) / total_num_participants) * 100, 2)
+lang_level_ratio = round(((sort(table(df$English.level), decreasing=TRUE)['B2']) / total_num_participants) * 100, 2)
+age_mean = round(mean(df$Age), 2)
+age_sd = round(sd(df$Age), 2)
+```
+
+# Introduction
+The comforting purr of our beloved cats is masking a silent threat to biodiversity, one of the most urgent worldwide challenges today [@watson2019summary]. Although domestic cats are the most popular pets in Europe [@statista2022eu], their impact on wildlife, particularly on birds, is a cause for great concern. They are responsible for the annual death of 30 million birds in Switzerland [@question2021] and are the leading cause of death, comparable to window collisions, in Belgium and France [@pavisse2019domestic]. These impacts also extend beyond predation and include competition [@george1974domestic], fear effect, disease transmission [@loss2017population], and hybridization [@macdonald2010biology].
+Many legislations at the national and international levels exist to address biodiversity concerns, such as not allowing owned cats to go outdoors or manually removing unowned and stray cats from the landscape. The implementation of these laws, however, proves to be challenging [@trouwborst2020domestic], implying that addressing this issue requires not only legal enforcement but also a collective effort from pet owners and the public. In this study, we would like to see if it is possible to affect people's knowledge acquisition of information about cats using different representations of cats that may trigger their internal bias. For example, when humans encounter a potentially threatening animal, there is an evolutionary advantage in processing negative information about the creature more attentively, a phenomenon which is a form of negativity bias [@rozin2001negativity]. If this is the case, we would then be able to better inform the public about the detrimental impacts of domestic cats on biodiversity and increase awareness in the hopes that it will encourage individuals to take action, rather than solely relying on governmental regulations.
+
+A prior study has demonstrated that participants exposed to images of bats portrayed as threatening creatures tended to recall more negative information about bats compared to alternative representations [@greving2020better]. Another study has shown that representing animals as distressed could serve as a way to evoke different emotions and attitudes towards wildlife conservation [@greving2021you]. There, however, exists a distinct lack of research regarding the application of the negativity bias to domestic cats and their influence on biodiversity. Unlike bats, domestic cats are considered pets and have an overwhelmingly cute perception among people. Cats are also a common presence in households in Europe, making their impact on wildlife pervasive and immediate.
+
+The present study seeked to address this gap by exploring how different visual representations of cats can influence participants' recall of information about cats. Participants were tasked with reading a text about cats while being presented with images of cats, each falling into categories of scary, dirty, cute, or neutral (in which they are shown no image). Unlike the previous study that utilized imperiled as a category, we opted to add dirty instead since cats already provoke feelings of compassion in people and our hypothesis focuses more on negative representations. The dirty representation also allows us to explore the influence of disgust which is a powerful emotion that not only triggers a strong immediate response but also has a lasting impact on our cognitive processes. The importance of disgust lies in its evolutionary role in protecting us from harmful substances and pathogens, which is why it is closely linked to memory recall [@schienle2021disgust]. Disgust has also been shown to cause increased memory recall compared to equally unpleasant frightening images [@croucher2011disgust]. As suggested by the authors of the prevous study [@greving2020better], we included both free recall and recognition tasks as different measures to assess knowledge acquisition. Given that cats are more familiar as pets, we anticipated a more positive information recall with cute representations, despite the minimal impact of cute representation in the previous study [@greving2020better]. We also hypothesized that scary or dirty cat pictures increase the recall of negative information compared to other representations. These finding may be crucial for changing attitudes toward cats by effectively informing and influencing public perception and behavior through targeted, impactful communication strategies.
+
+# Methods and Material
+## Participants
+The participants for the study were recruited both through personal contacts and through the University of Lausanne (UNIL). Those recruited through personal contacts participated without compensation, while those recruited through the UNIL were compensated with university credits. In total, there were `{r} round(total_num_participants/2)` participants. They were mostly Swiss (`{r} nationality_ch_ratio`%) and primarily young female students (`{r} gender_female_ratio`%). The primary fields of study of the participants were Psychology (`{r} field_psych_ratio`%) and Physics (`{r} field_phys_ratio`%). Out of the participants, (`{r} lang_level_ratio`%) reported their level of English as B2 or above. The mean age was `{r} age_mean` years ($SD = `{r} age_sd`$, range $`{r} min(df$Age)`-`{r} max(df$Age)`$). The participants were informed about the usage of their anonymized data.
+
+  
+## Survey Procedure
+The aim of the survey was to record participants' recollection of cat information after having looked at a variety of pictures of cats. The study was conducted anonymously online using the survey tool Qualtrics. After consenting to the terms of the survey the participant was instructed to provide their age, sex, field of study/occupation, if they have a cat allergy, if they have owned a cat, how much they considered themselves a city person (cityness), their nationality, and their level of English. The participants were then shown a picture of a cat from one of four categories cute, scary, dirty and neutral (neutral meant no picture was shown) @fig-cats. If a picture was shown, they were asked to answer two question regarding the picture to assess their attention. Participants that failed the attention check were removed from the study entirely.
+
+
+They were then prompted to read a text with information (positive, negative, neutral), accompanied by the same picture. Upon finishing the text they were prompted to complete two memory tests. The first was a free recall test, in which they were asked to provide three pieces of information that they remember from the text. In the second recall test, they were prompted to answer yes and no to whether certain words had appeared in the text [@nickreidTrueFalseRecognition2023]. Of these words 12 were positive, 12 were negative, 6 were neutral and 15 were not in the text (unrelated). After completing this recall test, the participant was prompted to redo the survey with a new text and a different condition. After the second trial, the participant was thanked, and debriefed on the purpose of the study. An overview of the survey flow can be seen on @fig-flow.
+
+  
+::: {#fig-cats layout="[[50, 50], [30]]"}
+![Scary](assets/scary.jpg){#fig-cats-scary width=200}
+
+![Dirty](assets/dirty.jpg){#fig-cats-dirty width=200}
+
+![Cute](assets/cute.jpg){#fig-cats-cute height=200}
+
+Different conditions of the study.
+:::
+
+![Procedure of study.](assets/flowchart.png){#fig-flow}
+
+
+## Data Prepration and Analysis
+The amount of positive, negative, neutral, and unrelated information for the free recall task was manually annotated by systematically comparing what was recalled by the participant with a schema of all the information contained in the text listed as positive, neutral and negative. Each text response by the participant was reviewed twice, by two different reviewers, the results of which were then averaged. From the recognition task, the fraction of positive, negative, neutral and unrelated recalled keywords were calculated.
+
+The study was conducted twice by each participant, with two different conditions. To later check for possible dependency between the two trials, a categorical variable was added to the dataset specifying which condition the participant was put through, before the current condition. For the entries corresponding to the first trial this variable had the value none, and for entries corresponding to the second trial, this variable was assigned the condition on the first trial (either cute, dirty, scary, neutral).
+
+The data were cleaned using Python [@van2007python] and analyzed using R [@r2013r]. For the main analysis since we had clear well-defined hypothesis, we used orthogonal contrast analyses, which test a priori hypotheses, simplify result interpretation, reduce type I error, and increase statistical power. For k levels of a categorical variable (in our case, four), we needed k – 1 contrasts. Each contrast must have coefficients summing to zero, and the sum of the products of coefficients across contrasts must also be zero [@nogueiraOrthogonalContrastsDefinitions2004]. As exploratory measures, we next performed ANOVA to test for any difference in recalled information in between the different conditions. Afterward, to evaluate the impact of covariates, we utilized the stepwise selection method provided by the MASS package [@venablesModernAppliedStatistics2002] in R, focusing on minimizing the Akaike Information Criterion (AIC). The AIC is a well-established metric used to assess the relative quality of statistical models for a given dataset, balancing model fit and complexity. By employing this method in a bidirectional manner, we aimed to identify the optimal set of variables that yield the best predictive model while maintaining parsimony. For each memory recognition measure, we found variables that significantly contributed to the model's explanatory power. The initial model for the stepwise process contained variables condition, previous condition (this is only valid for the second round), age, study level, field of study, having a cat allergy, having previously had a cat, how much the participant feels they are a city person, nationality, and level of English language.
+
+  
+# Results
+The planned contrasts for each hypothesis are shown in @tbl-contrasts. Orthogonal contrasts analysis revealed no significant effect for any of the contrasts in any of the neutral, positive, negative, and unrelated information retrieval for both free recall @tbl-contrasts-freerecall and recognition memory tests @tbl-contrasts-recog. The first contrast, related to the hypothesis that cute representation elicits more positive information retrieval, was not supported by the data. Similarly, the second contrast, which hypothesized that scary representation elicits more negative information retrieval, showed no significant effects. Additionally, the third contrast, which hypothesized that dirty representation elicits more negative information retrieval compared to cute and neutral, also did not yield significant results. Thus, these findings overall do not support any of our three hypotheses. To see if there are any differences in between the means of our conditions, we next performed ANOVA on each memory tasks. There were no significant difference in between the means within free recall task @tbl-anova-freerecall and recognition memory task @tbl-anova-recog. Therefore, we did not perform any further post-hoc analysis. Finally, to explore the effect of covariates on the prediction, we tried to find the best predicting model for free recall @tbl-aic-freerecall and recognition memory @tbl-aic-recog task based on all the covariates. Interestingly, the condition variable was removed by the stepwise process from all the models and manually including it made the performance of the model worse. These results also indicate that putting the participants through the trial two times, which is reflected in the "Previous.condition" variable has no effect on the prediction of recognition memory task. Moreover, we found that having an allergy significantly improved the model for predicting the amount of positive information in recognition task with a negative coefficient @tbl-sig-covar meaning, having an allergy with cat makes you recall less positive information.
+
+
+# Discussion
+This study explored how different visual representations of cats influence participants' recall of information about cats. The findings of our study provide valuable insights into the complexity of influencing public perception and knowledge acquisition. We had hoped on the potential of triggering internal biases in participants through images categorized as cute, scary, dirty, or neutral. However, contrary to our hypotheses, the different visual representations of cats did not significantly affect the recall of positive, negative, or neutral information about cats.
+
+These findings are not in line with previous research that demonstrated the influence of visual representations on knowledge acquisition about bats [@bats]. They found that portraying bats as threatening increased the recall of negative information, aligning with an evolutionary advantage in processing negative information about potentially dangerous animals. However, this study's results suggest that this phenomenon may not extend to domestic cats. This discrepancy can be attributed to the unique social and emotional bonds humans share with domestic cats, which likely buffer against the effects of negative representations. Additionally, the familiarity and frequent positive interactions with cats may overshadow attempts to show their ecological impact through negative imagery.
+
+The overwhelming prevalence of cute representations of cats in popular culture [@thibault2018run] may have attenuated the influence of other representations on participants' information recall. Additionally, the emotional valence associated with each representation may not have been strong or distinct enough to elicit differential recall of information. While previous studies have shown the influence of emotions like fear and disgust on memory recall [@croucher2011disgust], these effects may vary depending on individual differences and contextual factors. Another study that tried to influence knowledge acquisition of participants using the image of a cute fox, also did not find an overall effect of visual emotionalization on knowledge gain which they found surprising [@flemming2018emotionalization].
+
+Our exploratory analyses revealed that demographic factors such as having a cat allergy influenced the recall of information, specifically reducing the recall of positive information. Participants with cat allergies recalled less positive information in the recognition task. This suggests that personal experiences with cats may influence information recall independently of the visual representations. This shows that targeted communication strategies might need to consider individual differences more closely.
+
+Our study contributes to the growing body of literature on human-animal interactions and the role of visual representations in shaping knowledge and attitudes [@altmeyer2020use]. While previous research has demonstrated the effectiveness of negative representations in increasing knowledge recall about less familiar and more negatively perceived animals, our study shows the limitations of applying similar strategies to more positively perceived animals, like cats. Moving forward, researchers may explore alternative strategies for enhancing public awareness of biodiversity threats posed by domestic cats, considering factors such as individual differences, cultural influences, and message framing.
+  
+## Limitations
+Several limitations in our study warrant consideration. First, the sample size was relatively small and predominantly composed of young, Swiss female psychology students, which may limit the generalizability of our findings to broader populations. Second, the study's reliance on self-reported data and online survey methods introduces potential biases, such as social desirability and varying levels of participant engagement [@caputo2017social]. Although attention checks were implemented, they may not entirely mitigate these biases [@kung2018attention]. Third, the study design involved short-term exposure to visual stimuli and only considered immediate recall after exposure, which may not be sufficient to produce lasting changes in perception or knowledge [@postle2015cognitive]. Additionally, our study did not account for the potential influence of pre-existing attitudes towards cats and wildlife conservation. Participants with strong pre-existing beliefs may be less susceptible to change through visual manipulation alone. Finally, while the study aimed to explore the negativity bias by using dirty and scary representations, the selected images may not have been sufficiently impactful to elicit strong negative responses.
+
+
+## Future Directions
+In future studies, enhancing the generalizability of findings should be a priority by incorporating a more diverse and larger sample. Furthermore, investigations beyond visual representations and towards other sensory modalities or combinations of representations could provide valuable insights into information recall. Additionally, considering and controlling for baseline attitudes towards cats, would improve the understanding of the observed effects. Moreover, rigorous pre-testing and selection of images are essential to ensure they reliably evoke intended emotional responses. Lastly, investigating long-term recall is crucial to make see the impact of visual representations over time.
+
+
+# Conclusion
+This study explored how different visual representations of cats (cute, scary, dirty, or neutral) affect positive, negative, and neutral information recall about cats. Contrary to our hypotheses, these representations did not significantly influence recall. This suggests that strong emotional bonds with domestic cats may mitigate the effects of negative imagery. Individual factors, such as cat allergies, influenced recall, reducing positive information recall. This shows the need to consider personal differences in awareness campaigns about the ecological impact of cats. Our findings suggest that while visual representations work for less familiar animals like bats, they are less effective for familiar, positively perceived animals like cats. Future research should explore alternative methods and individual differences to improve public awareness efforts.
+
+```{r}
+#| eval: true
+#| output: asis
+#| label: tbl-contrasts
+#| tbl-cap: "Planned contrasts."
+
+planned_df = data.frame(Hypothesis = c("Cute vs Rest", "Scary vs Rest", "Dirty vs (Cute and Neut)"), Cute = c(3, -1, -1), Neutral = c(-1, -1, -1), Dirty = c(-1, -1, 2), Scary = c(-1, 3, 0))
+kable(planned_df, booktabs = TRUE)
+```
+
+
+```{r orthogonal-contrasts}
+#| eval: true
+# Group order set above: "Cute", "Neut", "Dirty", "Scary"
+c1 = c(3, -1, -1, -1)  # Cute group may remember more positive information
+c2 = c(-1, -1, -1,  3)  # Scary group may remember more negative information
+c3 = c(-1, -1,  2,  0)  # Dirty group may remember more negative information
+contrast_names = c("intercept", "Cute vs Rest", "Scary vs Rest", "Dirty vs (Cute and Neut)")
+contrasts_matrix <- cbind(c1, c2, c3)
+# Apply contrasts to the factor
+contrasts(df$condition) <- contrasts_matrix
+```
+
+```{r orthogonal-contrasts-recog}
+#| eval: true
+#| output: asis
+#| label: tbl-contrasts-recog
+#| tbl-cap: "Orthogonal contrasts regression analysis for recognition memory tasks."
+columns_of_interest <- c("recog_pos", "recog_neg", "recog_neut", "recog_unrel")
+columns_of_interest_verbose <- c("Positive information recall", "Negative information recall", "Neutral information recall", "Unrelated information recall")
+
+kabble_dfs = list()
+for(clm in columns_of_interest) {
+  model <- lm(as.formula(paste(clm, "~", "condition")), data = df)
+  model_summary = summary.lm(model)
+  fit_table = tidy(model, conf.int = TRUE) |>
+  mutate(across(.cols = where(is.numeric),
+                .fns = ~as.character(round(.x, digits = 3))),
+         p.value = map_chr(p.value, pvalue),
+         "95 % CI" = paste0(conf.low, ", ", conf.high)) |> 
+  dplyr::select(Term = term, Estimate = estimate, SE = std.error, "95 % CI",
+         p = p.value) |>
+    mutate(Term = contrast_names)
+  fit_table = fit_table[-1, ]
+  if(length(kabble_dfs) == 0) {
+    kabble_dfs = fit_table
+  } else {
+    kabble_dfs = rbind(kabble_dfs, fit_table)
+  }
+}
+kable_index = c(3, 3, 3, 3)
+names(kable_index) = columns_of_interest_verbose
+kable(kabble_dfs, booktabs = TRUE) |> pack_rows(index = kable_index)
+```
+
+```{r orthogonal-contrasts-freerecall}
+#| eval: true
+#| output: asis
+#| label: tbl-contrasts-freerecall
+#| tbl-cap: "Orthogonal contrasts regression analysis for free recall memory tasks."
+columns_of_interest <- c("freerecall_pos", "freerecall_neg", "freerecall_neut", "freerecall_unrel")
+columns_of_interest_verbose <- c("Positive information recall", "Negative information recall", "Neutral information recall", "Unrelated information recall")
+
+kabble_dfs = list()
+for(clm in columns_of_interest) {
+  model <- lm(as.formula(paste(clm, "~", "condition")), data = df)
+  model_summary = summary.lm(model)
+  fit_table = tidy(model, conf.int = TRUE) |>
+  mutate(across(.cols = where(is.numeric),
+                .fns = ~as.character(round(.x, digits = 3))),
+         p.value = map_chr(p.value, pvalue),
+         "95 % CI" = paste0(conf.low, ", ", conf.high)) |> 
+  dplyr::select(Term = term, Estimate = estimate, SE = std.error, "95 % CI",
+         p = p.value) |>
+    mutate(Term = contrast_names)
+  fit_table = fit_table[-1, ]
+  if(length(kabble_dfs) == 0) {
+    kabble_dfs = fit_table
+  } else {
+    kabble_dfs = rbind(kabble_dfs, fit_table)
+  }
+}
+kable_index = c(3, 3, 3, 3)
+names(kable_index) = columns_of_interest_verbose
+kable(kabble_dfs, booktabs = TRUE) |> pack_rows(index = kable_index)
+```
+
+```{r anova-recog}
+#| eval: true
+#| output: asis
+#| label: tbl-anova-recog
+#| tbl-cap: "ANOVA analysis for recognition memory tasks."
+columns_of_interest <- c("recog_pos", "recog_neg", "recog_neut", "recog_unrel")
+columns_of_interest_verbose <- c("Positive information recall", "Negative information recall", "Neutral information recall", "Unrelated information recall")
+
+kabble_dfs = list()
+i = 1
+for(clm in columns_of_interest) {
+  model <- aov(as.formula(paste(clm, "~", "condition")), data = df)
+  fit_table = tidy(model, conf.int = TRUE) |>
+  mutate(across(.cols = where(is.numeric),
+                .fns = ~as.character(round(.x, digits = 3))),
+         p.value = map_chr(p.value, pvalue)) |> 
+  dplyr::select(DF = df, F=statistic,
+         p = p.value) |>
+  mutate(Information=c(columns_of_interest_verbose[[i]], "")) |>
+  select(Information, everything())
+  fit_table[1, 2] = paste0(fit_table[1, 2], ", ", fit_table[2, 2])
+  fit_table = fit_table[-2, ]
+  if(length(kabble_dfs) == 0) {
+    kabble_dfs = fit_table
+  } else {
+    kabble_dfs = rbind(kabble_dfs, fit_table)
+  }
+  i = i + 1
+}
+kable(kabble_dfs, booktabs = TRUE)
+```
+
+```{r anova-freerecall}
+#| eval: true
+#| output: asis
+#| label: tbl-anova-freerecall
+#| tbl-cap: "ANOVA analysis for free recall memory tasks."
+contrasts(df$condition) <- NULL
+columns_of_interest <- c("freerecall_pos", "freerecall_neg", "freerecall_neut", "freerecall_unrel")
+columns_of_interest_verbose <- c("Positive information recall", "Negative information recall", "Neutral information recall", "Unrelated information recall")
+
+kabble_dfs = list()
+i = 1
+for(clm in columns_of_interest) {
+  model <- aov(as.formula(paste(clm, "~", "condition")), data = df)
+  fit_table = tidy(model, conf.int = TRUE) |>
+  mutate(across(.cols = where(is.numeric),
+                .fns = ~as.character(round(.x, digits = 3))),
+         p.value = map_chr(p.value, pvalue)) |> 
+  dplyr::select(DF = df, F=statistic,
+         p = p.value) |>
+  mutate(Information=c(columns_of_interest_verbose[[i]], "")) |>
+  select(Information, everything())
+  fit_table[1, 2] = paste0(fit_table[1, 2], ", ", fit_table[2, 2])
+  fit_table = fit_table[-2, ]
+  if(length(kabble_dfs) == 0) {
+    kabble_dfs = fit_table
+  } else {
+    kabble_dfs = rbind(kabble_dfs, fit_table)
+  }
+  i = i + 1
+}
+kable(kabble_dfs, booktabs = TRUE)
+```
+
+```{r vairable-formatter}
+#| eval: true
+var_formatter = function(strings) {
+  strings <- gsub("^condition", "Condition", strings)
+  strings <- gsub("previous_condition", "Previous.condition", strings)
+  strings <- gsub("Cats.previously", "Had.cats.previously", strings)
+  return(strings)
+}
+```
+
+```{r aic-recog}
+#| eval: true
+#| output: asis
+#| label: tbl-aic-recog
+#| tbl-cap: "Model selection based on AIC for recognition memory tasks. \\newline{}"
+columns_of_interest <- c("recog_pos", "recog_neg", "recog_neut", "recog_unrel")
+columns_of_interest_verbose <- c("Positive information recall", "Negative information recall", "Neutral information recall", "Unrelated information recall")
+# Function to extract the required metrics
+extract_model_metrics <- function(model, null_model, model_name) {
+  lr_test <- lrtest(null_model, model)
+  lr_stat <- lr_test$Chisq[2]
+  model_summary <- summary(model)
+  aic <- AIC(model)
+  r_squared <- model_summary$r.squared
+  if("fstatistic" %in% names(model_summary)) {
+    p_val = pvalue(round(pf(model_summary$fstatistic[1], model_summary$fstatistic[2], model_summary$fstatistic[3], lower.tail = FALSE), 3))
+    lrstat = round(as.numeric(lr_stat), 3)
+    aic_val = round(as.numeric(aic), 3)
+    r_val = round(as.numeric(r_squared), 3)
+  } else {
+    p_val = "-"
+    lrstat = round(as.numeric(lr_stat), 3)
+    aic_val = round(as.numeric(aic), 3)
+    r_val = round(as.numeric(r_squared), 3)
+  }
+  return(data.frame(
+    Model = model_name,
+    `Number of Variables` = as.numeric(length(coef(model))),
+    `LR` = lrstat,
+    `p` = p_val,
+    AIC = aic_val,
+    `R squared` = r_val
+  ))
+}
+
+kabble_dfs = list()
+footnote_list = c()
+i = 2
+for (clm in columns_of_interest) {
+  full_model <- lm(as.formula(paste(clm, "~", "condition + previous_condition + Age  + Study.level + Field.of.study + Allergy + Cats.previously + Cityness + Nationality + English.level")), data = df)
+  null_model <- lm(as.formula(paste(clm, "~ 1")), data = df)
+  backward_model <- stepAIC(full_model, trace = FALSE, direction = "both")
+  
+  full_model_metrics <- extract_model_metrics(full_model, null_model, "Full$^1$")
+  backward_model_metrics <- extract_model_metrics(backward_model, null_model, paste0("AIC Selected", "$^", i, "$"))
+  i = i + 1
+  combined_metrics <- rbind(full_model_metrics, backward_model_metrics)
+  
+  selected_vars <- paste(all.vars(formula(backward_model))[-1], collapse = ", ")
+  if(selected_vars == "") {
+    selected_vars = "Intercept"
+  }
+  footnote_list = c(footnote_list, selected_vars)
+  
+  if(length(kabble_dfs) == 0) {
+    kabble_dfs = combined_metrics
+  } else {
+    kabble_dfs = rbind(kabble_dfs, combined_metrics)
+  }
+}
+footnote_list = c("condition, previous_condition, Age , Study.level, Field.of.study, Allergy, Cats.previously, Cityness, Nationality, English.level", footnote_list)
+footnote_list = var_formatter(footnote_list)
+kable_index = c(2, 2, 2, 2)
+names(kable_index) = columns_of_interest_verbose
+kbl(kabble_dfs, booktabs = TRUE,  escape = FALSE, col.names = c("Model", "Df", "LR", "p", "AIC", "$R^2$")) |>
+  pack_rows(index = kable_index) |>
+  footnote(number = footnote_list, threeparttable = TRUE)
+```
+
+```{r aic-freerecall}
+#| eval: true
+#| output: asis
+#| label: tbl-aic-freerecall
+#| tbl-cap: "Model selection based on AIC for free recall memory tasks. \\newline{}"
+columns_of_interest <- c("freerecall_pos", "freerecall_neg", "freerecall_neut", "freerecall_unrel")
+columns_of_interest_verbose <- c("Positive information recall", "Negative information recall", "Neutral information recall", "Unrelated information recall")
+# Function to extract the required metrics
+extract_model_metrics <- function(model, null_model, model_name) {
+  lr_test <- lrtest(null_model, model)
+  lr_stat <- lr_test$Chisq[2]
+  model_summary <- summary(model)
+  aic <- AIC(model)
+  r_squared <- model_summary$r.squared
+  if("fstatistic" %in% names(model_summary)) {
+    p_val = pvalue(round(pf(model_summary$fstatistic[1], model_summary$fstatistic[2], model_summary$fstatistic[3], lower.tail = FALSE), 3))
+    lrstat = round(as.numeric(lr_stat), 3)
+    aic_val = round(as.numeric(aic), 3)
+    r_val = round(as.numeric(r_squared), 3)
+  } else {
+    p_val = "-"
+    lrstat = round(as.numeric(lr_stat), 3)
+    aic_val = round(as.numeric(aic), 3)
+    r_val = round(as.numeric(r_squared), 3)
+  }
+  return(data.frame(
+    Model = model_name,
+    `Number of Variables` = as.numeric(length(coef(model))),
+    `LR` = lrstat,
+    `p` = p_val,
+    AIC = aic_val,
+    `R squared` = r_val
+  ))
+}
+
+kabble_dfs = list()
+footnote_list = c()
+i = 2
+for (clm in columns_of_interest) {
+  full_model <- lm(as.formula(paste(clm, "~", "condition + previous_condition + Age  + Study.level + Field.of.study + Allergy + Cats.previously + Cityness + Nationality + English.level")), data = df)
+  null_model <- lm(as.formula(paste(clm, "~ 1")), data = df)
+  backward_model <- stepAIC(full_model, trace = FALSE, direction = "both")
+  
+  full_model_metrics <- extract_model_metrics(full_model, null_model, "Full$^1$")
+  backward_model_metrics <- extract_model_metrics(backward_model, null_model, paste0("AIC Selected", "$^", i, "$"))
+  i = i + 1
+  combined_metrics <- rbind(full_model_metrics, backward_model_metrics)
+  
+  selected_vars <- paste(all.vars(formula(backward_model))[-1], collapse = ", ")
+  if(selected_vars == "") {
+    selected_vars = "Intercept"
+  }
+  footnote_list = c(footnote_list, selected_vars)
+  
+  if(length(kabble_dfs) == 0) {
+    kabble_dfs = combined_metrics
+  } else {
+    kabble_dfs = rbind(kabble_dfs, combined_metrics)
+  }
+}
+footnote_list = c("Condition, Previous.condition, Age , Study.level, Field.of.study, Allergy, Cats.previously, Cityness, Nationality, English.level", footnote_list)
+footnote_list = var_formatter(footnote_list)
+kable_index = c(2, 2, 2, 2)
+names(kable_index) = columns_of_interest_verbose
+kbl(kabble_dfs, booktabs = TRUE,  escape = FALSE, col.names = c("Model", "Df", "LR", "p", "AIC", "$R^2$")) |>
+  pack_rows(index = kable_index) |>
+  footnote(number = footnote_list, threeparttable = TRUE)
+```
+
+```{r sig-covar}
+#| eval: true
+#| output: asis
+#| label: tbl-sig-covar
+#| tbl-cap: "Effect of having an allergy on positive information recall in recognition task."
+contrasts(df$condition) <- NULL
+columns_of_interest <- c("recog_pos")
+columns_of_interest_verbose <- c("Positive information recall")
+sig_covar_table = NULL
+kabble_dfs = list()
+i = 1
+for(clm in columns_of_interest) {
+  model <- lm(as.formula(paste(clm, "~", "Allergy + Cats.previously")), data = df)
+  fit_table = tidy(model, conf.int = TRUE) |>
+  mutate(across(.cols = where(is.numeric),
+                .fns = ~as.character(round(.x, digits = 3))),
+         p.value = map_chr(p.value, pvalue),
+         "95 % CI" = paste0(conf.low, ", ", conf.high)) |> 
+  dplyr::select(Term = term, Estimate = estimate, SE = std.error, "95 % CI",
+         p = p.value)
+  fit_table = fit_table[-1, ]
+  fit_table[1, 1] = "Allergy: Maybe"
+  fit_table[2, 1] = "Allergy: Yes"
+  fit_table[3, 1] = "Had Cats Previously: Yes"
+  sig_covar_table = fit_table
+  print(kable(fit_table))
+  i = i + 1
+}
+```
