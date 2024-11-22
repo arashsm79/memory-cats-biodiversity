@@ -1,6 +1,6 @@
 ---
-title: "The Cuteness Fallacy: How Representations Affect People’s Knowledge Acquisition of Domestic
-Cats’ Impact on Biodiversity"
+title: "The Cuteness Fallacy: How Visual Representations Influence Knowledge Acquisition About Ecological Threats of Domestic Cats"
+shorttitle: "The Cuteness Fallacy"
 author:
   - name: Arash Sal Moslehian
     corresponding: true
@@ -11,10 +11,11 @@ author:
         city: Lausanne
         country: Switzerland
 abstract: |
- Despite being beloved pets, cats pose significant threats to wildlife through predation and competition. Existing legislations struggle to mitigate these impacts, highlighting the necessity for effective communication strategies. This study surveys a mostly female Swiss sample (150 participants) of university students. We investigate how different visual representations of domestic cats-categorized as cute, scary, dirty, or neutral-influence participants' recall of information-either positive, negative, or neutral-about cats. We hypothesized that negative and dirty representations would enhance recall of negative information and cute representation would enhance the recall of positive information. Contrary to our expectations, our analyses revealed no significant effect of visual representations on the recall of positive, negative, or neutral information. The results suggest that strong emotional and social bonds with cats, as well as their prevalent positive representation in culture, may buffer against the influence of negative imagery. Exploratory analyses indicated that individual factors, such as having a cat allergy, significantly reduced the recall of positive information. These findings show the complexity of altering public perception about the ecological impact of familiar and positively perceived animals like cats. Our study reveals the limitations of using visual representations alone to influence knowledge acquisition.
+ Despite being beloved pets, cats pose significant threats to wildlife through predation and competition. Existing legislations struggle to mitigate these impacts, highlighting the need for effective communication strategies. This study surveyed 150 university students to investigate how different visual representations of domestic cats—categorized as cute, scary, dirty, or neutral—affect recall of positive, negative, or neutral information about cats. We hypothesized that negative and dirty representations would enhance recall of negative information, while cute representations would enhance positive recall. Contrary to expectations, no significant effect of visual representations on information recall was found. Results suggest strong emotional bonds with cats may buffer negative imagery. Exploratory analyses indicated that individual factors, like having a cat allergy, reduced recall of positive information. These findings show the complexity of altering public perception about positively perceived animals like cats.
 keywords: [biodiversity, cats, memory, emotions, representation]
 author-note:
   disclosures:
+    gratitude: "The author would like to thank Oliver Smedt, Andrey Shusharin and Valentine Rehn for their help with survey and data annotation. I further thank Maël Theubet for their guidance throughout the study."
     conflict of interest: The author has no conflict of interest to declare.
 execute:
   echo: false
@@ -24,6 +25,7 @@ bibliography: references.bib
 format:
   apaquarto-pdf:
     keep-tex: true
+    fig-pos: 'H'
   apaquarto-html: default
   pdf:
     keep-tex: true
@@ -33,7 +35,7 @@ format:
 
 ```{r loading-libraries}
 #| eval: true
-setwd('/home/arashsm79/Playground/EPFL/memory-cats-biodiversity')
+setwd('/home/arashsm79/playground/memory-cats-biodiversity')
 library(ggplot2)
 library(olsrr)
 library(MASS)
@@ -142,7 +144,7 @@ They were then prompted to read a text with information (positive, negative, neu
 Different conditions of the study.
 :::
 
-![Procedure of study.](assets/flowchart.png){#fig-flow}
+![Procedure of study.](assets/flowchart.jpg){#fig-flow}
 
 
 ## Data Prepration and Analysis
